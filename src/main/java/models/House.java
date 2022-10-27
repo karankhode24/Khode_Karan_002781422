@@ -7,7 +7,7 @@ package models;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class House {
     String addressLine1;

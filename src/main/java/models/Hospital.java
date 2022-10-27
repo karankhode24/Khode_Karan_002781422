@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class Hospital {
     private String name;
@@ -30,6 +30,10 @@ public class Hospital {
         this.community = community;
         doctorList = new ArrayList();
         patientList = new ArrayList();
+    }
+    
+    public void addDoctor(Doctor doctor) {
+        doctorList.add(doctor);
     }
     
     public int getZipCode() {

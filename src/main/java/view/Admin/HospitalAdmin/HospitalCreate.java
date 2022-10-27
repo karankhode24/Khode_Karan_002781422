@@ -16,7 +16,7 @@ import resources.Validations;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class HospitalCreate extends javax.swing.JPanel {
 
@@ -209,10 +209,11 @@ public class HospitalCreate extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCity)
-                    .addComponent(ddCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valCity, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valCity, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblCity)
+                        .addComponent(ddCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -304,7 +305,7 @@ public class HospitalCreate extends javax.swing.JPanel {
         if (!this.validations.ValidateName(txtName.getText()) ) {
             valName.setText("Name is Invalid");
             valid = false;
-        } else if (!(city == null) && !(community == null) && MainJFrame.hospitalDirectory.isHospitalExistInCommunity(txtName.getText(), city, community)) {
+        } else if (!(city == null) && MainJFrame.hospitalDirectory.isHospitalExistInCity(txtName.getText(), city)) {
             valName.setText("Hospital already Exist");
             valid = false;
         }
@@ -381,7 +382,7 @@ public class HospitalCreate extends javax.swing.JPanel {
         
         if (!this.validations.ValidateName(txtName.getText()) ) {
             valName.setText("Name is Invalid");
-        } else if (!(city == null) && !(community == null) && MainJFrame.hospitalDirectory.isHospitalExistInCommunity(txtName.getText(), city, community)) {
+        } else if (!(city == null) && MainJFrame.hospitalDirectory.isHospitalExistInCity(txtName.getText(), city)) {
             valName.setText("Hospital already Exist");
         }
         else {

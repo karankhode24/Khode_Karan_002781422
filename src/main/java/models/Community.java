@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class Community {
     String name;

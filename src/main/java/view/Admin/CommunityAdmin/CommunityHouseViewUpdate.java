@@ -15,7 +15,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class CommunityHouseViewUpdate extends javax.swing.JPanel {
 

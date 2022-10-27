@@ -6,18 +6,43 @@ package models;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class Person {
     private String name;
     private int age;
     private String email;
     private String gender;
+    private String phoneNumber;
     private City city;
     private Community community;
-    private House house;
     private String username;
     private String password;
+
+    public Person(String name, int age, String email, String gender, String phoneNumber, City city, Community community, String username, String password) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.gender = gender;
+        this.phoneNumber = phoneNumber;
+        this.city = city;
+        this.community = community;
+        this.username = username;
+        this.password = password;
+    }
+    
+    public boolean isMatch(String name){
+        if(getName().equals(name)) return true;
+        return false;
+    }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public String getGender() {
         return gender;
@@ -82,14 +107,5 @@ public class Person {
     public void setCommunity(Community community) {
         this.community = community;
     }
-
-    public House getHouse() {
-        return house;
-    }
-
-    public void setHouse(House house) {
-        this.house = house;
-    }
-    
     
 }

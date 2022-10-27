@@ -15,7 +15,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class CommunityHouseCreate extends javax.swing.JPanel {
 
@@ -29,6 +29,7 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
         AutoCompleteDecorator.decorate(ddCity);
         AutoCompleteDecorator.decorate(ddCommunity);
             
+        ddCity.removeAllItems();
         ddCity.addItem("");
         for (City city: MainJFrame.cityDirectory.getCityList()) {
             ddCity.addItem(city.getName());

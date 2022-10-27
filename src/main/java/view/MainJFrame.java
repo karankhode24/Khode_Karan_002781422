@@ -12,12 +12,13 @@ import models.CityDirectory;
 import models.CommunityDirectory;
 import models.DoctorDirectory;
 import models.HospitalDirectory;
+import models.PersonDirectory;
 import view.Admin.AdminJFrame;
 import resources.CreateDefaultData;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -30,6 +31,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public static CityDirectory cityDirectory = new CityDirectory();
     public static HospitalDirectory hospitalDirectory = new HospitalDirectory();
     public static DoctorDirectory doctorDirectory  = new DoctorDirectory();
+    public static PersonDirectory personDirectory = new PersonDirectory();
     
     public MainJFrame() {
         initComponents();

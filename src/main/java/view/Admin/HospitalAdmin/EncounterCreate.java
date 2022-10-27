@@ -6,7 +6,7 @@ package view.Admin.HospitalAdmin;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class EncounterCreate extends javax.swing.JPanel {
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class DoctorDirectory {
     ArrayList<Doctor> doctorList ;
@@ -19,10 +19,11 @@ public class DoctorDirectory {
 
     }
 
-    public Doctor newDoctor(String about, Hospital hospital) {
+    public Doctor newDoctor(String about, Hospital hospital, Person person) {
 
-        Doctor d = new Doctor(about, hospital);
+        Doctor d = new Doctor(about, hospital, person);
         doctorList.add(d);
+        hospital.addDoctor(d);
         return d;
     }
     

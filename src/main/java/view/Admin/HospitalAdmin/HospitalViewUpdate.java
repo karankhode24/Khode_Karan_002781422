@@ -15,7 +15,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class HospitalViewUpdate extends javax.swing.JPanel {
 
@@ -264,9 +264,8 @@ public class HospitalViewUpdate extends javax.swing.JPanel {
                     .addComponent(valAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblName3))
+                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblName3)
                     .addComponent(valAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,7 +329,7 @@ public class HospitalViewUpdate extends javax.swing.JPanel {
         if (!this.validations.ValidateName(txtName.getText()) ) {
             valName.setText("Name is Invalid");
             valid = false;
-        } else if (!(txtName.getText().equals(selectedDetails.getName())) && MainJFrame.hospitalDirectory.isHospitalExistInCommunity(txtName.getText(), selectedDetails.getCity(), selectedDetails.getCommunity())) {
+        } else if (!(txtName.getText().equals(selectedDetails.getName())) && MainJFrame.hospitalDirectory.isHospitalExistInCity(txtName.getText(), selectedDetails.getCity())) {
             valName.setText("Hospital already Exist");
             valid = false;
         }
@@ -402,7 +401,7 @@ public class HospitalViewUpdate extends javax.swing.JPanel {
         
         if (!this.validations.ValidateName(txtName.getText()) ) {
             valName.setText("Name is Invalid");
-        } else if (!(txtName.getText().equals(name)) && MainJFrame.hospitalDirectory.isHospitalExistInCommunity(txtName.getText(), h.getCity(), h.getCommunity())) {
+        } else if (!(txtName.getText().equals(name)) && MainJFrame.hospitalDirectory.isHospitalExistInCity(txtName.getText(), h.getCity())) {
             valName.setText("Hospital already Exist");
         }
         else {

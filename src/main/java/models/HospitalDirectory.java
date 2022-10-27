@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class HospitalDirectory {
     private ArrayList<Hospital> hospitalList;
@@ -31,9 +31,9 @@ public class HospitalDirectory {
         return hospitalList;
     }
     
-    public boolean isHospitalExistInCommunity(String name, City city, Community community) {
+    public boolean isHospitalExistInCity(String name, City city) {
         for (Hospital h : hospitalList) {
-            if (h.getCity().equals(city) && h.getCommunity().equals(community)) {
+            if (h.getCity().equals(city)) {
                 if (h.getName().startsWith(name)) {
                     return true;
                 }
@@ -41,5 +41,30 @@ public class HospitalDirectory {
         }
         
         return false;
+    }
+    
+    public Hospital getHospitalObject(String name, City city, Community community) {
+        for (Hospital h : hospitalList) {
+            if (h.getCity().equals(city) && h.getCommunity().equals(community)) {
+                if (h.getName().equals(name)) {
+                    return h;
+                }
+            }
+        }
+        
+        return null;
+    }
+    
+    public ArrayList<Hospital> searchHospitalByCommunity(Community community)
+    {
+        ArrayList<Hospital> searchHospitalDirectory = new ArrayList();
+        for(Hospital hospital: hospitalList)
+        {
+            if(hospital.getCommunity().equals(community))
+            {
+                searchHospitalDirectory.add(hospital);
+            
+        }}
+        return searchHospitalDirectory;
     }
 }

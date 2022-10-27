@@ -4,12 +4,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class Patient {
     
     private int patientID;
-    
     private String primaryDoctorName;
     private String prefferedPharmacy;
     private ArrayList<Encounter> encounterList = new ArrayList();

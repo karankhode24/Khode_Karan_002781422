@@ -10,7 +10,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class AdminJFrame extends javax.swing.JFrame {
 

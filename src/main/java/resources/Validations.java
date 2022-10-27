@@ -9,11 +9,21 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class Validations {
     public boolean ValidatePhoneNumber(String value) {
         String PATTERN = "^(\\+\\d{1,3}( )?)?(\\d{3}[ ]?){2}\\d{4}$";
+        return MatchPattern(PATTERN, value);
+    }
+    
+    public boolean ValidatePassword(String value) {
+        String PATTERN = "^[a-zA-Z0-9]{5,12}$";
+        return MatchPattern(PATTERN, value);
+    }
+    
+    public boolean ValidateUsername(String value) {
+        String PATTERN = "^(?=.{4,20}$)(?![.])[a-zA-Z0-9._]+(?<![.])$";
         return MatchPattern(PATTERN, value);
     }
     

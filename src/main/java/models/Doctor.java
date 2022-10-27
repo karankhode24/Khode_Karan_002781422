@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class Doctor {
     private String about;
@@ -16,10 +16,11 @@ public class Doctor {
     private Hospital hospital;
     private Person person;
     
-    public Doctor (String about, Hospital hospital){
+    public Doctor (String about, Hospital hospital, Person person){
         
         this.about = about;
         this.hospital = hospital;
+        this.person = person;
         patientList = new  ArrayList();
     }
 

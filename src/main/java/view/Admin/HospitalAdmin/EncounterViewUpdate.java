@@ -6,7 +6,7 @@ package view.Admin.HospitalAdmin;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class EncounterViewUpdate extends javax.swing.JPanel {
 

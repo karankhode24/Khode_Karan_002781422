@@ -6,7 +6,7 @@ package view.Admin.HospitalAdmin;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class PatientCreate extends javax.swing.JPanel {
 

@@ -9,7 +9,7 @@ import view.Admin.AdminJFrame;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class CommunityAdmin extends javax.swing.JFrame {
 
