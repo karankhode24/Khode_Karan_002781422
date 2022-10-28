@@ -8,7 +8,7 @@ import view.Admin.AdminJFrame;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class HospitalAdminJFrame extends javax.swing.JFrame {
 
@@ -44,7 +44,7 @@ public class HospitalAdminJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 204));
-        setPreferredSize(new java.awt.Dimension(800, 800));
+        setPreferredSize(new java.awt.Dimension(900, 800));
 
         controlPanel.setBackground(new java.awt.Color(153, 255, 204));
 

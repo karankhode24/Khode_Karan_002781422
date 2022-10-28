@@ -6,6 +6,7 @@ package view.Admin.HospitalAdmin;
 
 import java.util.Vector;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 import models.Doctor;
@@ -14,7 +15,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class DoctorViewUpdate extends javax.swing.JPanel {
 
@@ -180,11 +181,6 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        txtAge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAgeActionPerformed(evt);
-            }
-        });
         txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAgeKeyReleased(evt);
@@ -454,17 +450,14 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel)tblDetails.getModel();
-        Hospital selectedDetails = (Hospital) model.getValueAt(selectRowIndex, 6);
-
-        // Validation
+        Doctor selectedDetails = (Doctor) model.getValueAt(selectRowIndex, 11);
+        String email = model.getValueAt(selectRowIndex, 7).toString();
+        String username = model.getValueAt(selectRowIndex, 8).toString();
+        
         var valid = true;
 
-        // Validations
         if (!this.validations.ValidateName(txtName.getText()) ) {
             valName.setText("Name is Invalid");
-            valid = false;
-        } else if (!(txtName.getText().equals(selectedDetails.getName())) && MainJFrame.hospitalDirectory.isHospitalExistInCommunity(txtName.getText(), selectedDetails.getCity(), selectedDetails.getCommunity())) {
-            valName.setText("Hospital already Exist");
             valid = false;
         }
 
@@ -472,32 +465,65 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
             valAbout.setText("Details are required");
             valid = false;
         }
-
-        if (!this.validations.ValidateAddress(txtAddress.getText()) ) {
-            valAddress.setText("Address is required");
+        
+        if (btnGender.getSelection() == null) {
+            valGender.setText("Gender is required");
+            valid = false;
+        }
+        
+        if (!this.validations.ValidateEmail(txtEmail.getText()) ) {
+            valEmail.setText("Email address is Invalid");
+            valid = false;
+        } else if (!(txtEmail.getText().equals(email)) && MainJFrame.personDirectory.isPersonByEmailExist(txtEmail.getText())) {
+                valEmail.setText("Email address already exist");
+                valid = false;
+            }
+        
+        if (!this.validations.ValidatePhoneNumber(txtPhoneNumber.getText()) ) {
+            valPhone.setText("Phone Number is Invalid");
+            valid = false;
+        }
+        
+        if (!this.validations.ValidateAge(txtAge.getText()) ) {
+            valAge.setText("Age is Invalid");
+            valid = false;
+        }
+        
+        if (!this.validations.ValidateUsername(txtUsername.getText()) ) {
+            valUsername.setText("Username is Invalid");
+            valid = false;
+        } else if (!(txtUsername.getText().equals(username)) && MainJFrame.personDirectory.isPersonByUsernameExist(txtUsername.getText())) {
+                valUsername.setText("Username already exist");
+                valid = false;
+            }
+        
+        String password = String.valueOf(txtPassword.getPassword());
+        if (!this.validations.ValidatePassword(password) ) {
+            valPassword.setText("Should be 5-12 character long");
             valid = false;
         }
 
-        if (!this.validations.ValidateZip(txtZipCode.getText()) ) {
-            valZipCode.setText("Zip Code is invalid");
-            valid = false;
-        }
-
-        // Validations ended
-
+        //
         if (valid) {
-
-            // Set value
-            selectedDetails.setName(txtName.getText());
-            selectedDetails.setAbout(txtAbout.getText());
-            selectedDetails.setAddress(txtAddress.getText());
-            selectedDetails.setZipCode(Integer.parseInt(txtZipCode.getText()));
-            JOptionPane.showMessageDialog(this, "Updated the details successfully");
-
-            populateTable();
-            originalTableModel = (Vector) ((DefaultTableModel) tblDetails.getModel()).getDataVector().clone();
-            setValidationsNull();
+            
+            String gender;
+            if (btnMale.isSelected()) {
+                gender = "Male";
+            }
+            else if (btnFemale.isSelected()) {
+                gender = "Female";
+            }
+            else {
+                gender = "Other";
+            }
+            
+//            selectedDetails.getPerson().setAge(Integer.parseInt(txtAge.getText()));
+//            selectedDetails.getPerson().setAge(txtAge.getText());
+//            
+//            MainJFrame.doctorDirectory.newDoctor(txtAbout.getText(), this.hospital, p);
+            JOptionPane.showMessageDialog(this, "Doctor details Added");
             setTextNull();
+            setValidationNull();
 
         }
     }//GEN-LAST:event_btnUpdateActionPerformed
@@ -604,9 +630,18 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
     private void txtEmailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyReleased
         // TODO add your handling code here:
+        
+        int selectRowIndex = tblDetails.getSelectedRow();
+        if (selectRowIndex<0){
+            JOptionPane.showMessageDialog(this, "Please select a row to update");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel)tblDetails.getModel();
+        String email = model.getValueAt(selectRowIndex, 7).toString();
+        
         if (!this.validations.ValidateEmail(txtEmail.getText()) ) {
             valEmail.setText("Email address is Invalid");
-        } else if (MainJFrame.personDirectory.isPersonByEmailExist(txtEmail.getText())) {
+        } else if (!(txtEmail.getText().equals(email)) && MainJFrame.personDirectory.isPersonByEmailExist(txtEmail.getText())) {
             valEmail.setText("Email address already exist");
         }
 
@@ -625,9 +660,18 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
     }//GEN-LAST:event_btnFemaleActionPerformed
 
     private void txtUsernameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsernameKeyReleased
+        
+        int selectRowIndex = tblDetails.getSelectedRow();
+        if (selectRowIndex<0){
+            JOptionPane.showMessageDialog(this, "Please select a row to update");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel)tblDetails.getModel();
+        String username = model.getValueAt(selectRowIndex, 8).toString();
+        
         if (!this.validations.ValidateUsername(txtUsername.getText()) ) {
             valUsername.setText("Username is Invalid");
-        } else if (MainJFrame.personDirectory.isPersonByUsernameExist(txtUsername.getText())) {
+        } else if (!(txtUsername.getText().equals(username)) && MainJFrame.personDirectory.isPersonByUsernameExist(txtUsername.getText())) {
             valUsername.setText("Username already exist");
         }
 
@@ -650,12 +694,13 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtPasswordKeyReleased
 
-    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAgeActionPerformed
-
     private void txtAboutKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAboutKeyReleased
-        // TODO add your handling code here:
+        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+            valAbout.setText("Details are required");
+        }
+        else {
+            valAbout.setText(null);
+        }
     }//GEN-LAST:event_txtAboutKeyReleased
 
     private void populateTable() {

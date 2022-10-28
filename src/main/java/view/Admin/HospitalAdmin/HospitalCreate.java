@@ -16,7 +16,7 @@ import resources.Validations;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class HospitalCreate extends javax.swing.JPanel {
 

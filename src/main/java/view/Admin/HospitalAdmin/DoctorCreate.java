@@ -19,7 +19,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class DoctorCreate extends javax.swing.JPanel {
 

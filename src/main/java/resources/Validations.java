@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class Validations {
     public boolean ValidatePhoneNumber(String value) {

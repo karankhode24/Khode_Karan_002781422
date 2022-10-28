@@ -29,7 +29,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class CommunityCreate extends javax.swing.JPanel {
 

@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class Encounter {
     private Date date;

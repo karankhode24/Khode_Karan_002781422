@@ -6,7 +6,7 @@ package models;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class PatientDirectory {
     

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class Doctor {
     private String about;

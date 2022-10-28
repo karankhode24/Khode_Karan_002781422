@@ -13,7 +13,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class CreateDefaultData {
     public static void createData() {
@@ -47,7 +47,7 @@ public class CreateDefaultData {
         Hospital e = MainJFrame.hospitalDirectory.newHospital("mengo", "At nowhere", 452004, "637 sd", lowell, ai);
         
         // create person
-        Person p1 = MainJFrame.personDirectory.newPerson("vaibhav", 24, "vaibhav@gmail.com", "Male", "7878787878", boston, jp, "vbhv", "vbhv10");
+        Person p1 = MainJFrame.personDirectory.newPerson("karan", 24, "karan@gmail.com", "Male", "7878787878", boston, jp, "vbhv", "vbhv10");
         Person p2 = MainJFrame.personDirectory.newPerson("megha", 25, "megha@gmail.com", "Female", "7878743878", springField, gb, "megha", "vbhv10");
         Person p3 = MainJFrame.personDirectory.newPerson("nalin", 26, "nalin@gmail.com", "Male", "9878787878", worcester, vn, "nalin", "vbhv10");
         Person p4 = MainJFrame.personDirectory.newPerson("amit", 27, "amit@gmail.com", "Male", "2378787878", cambridge, sn, "amit", "vbhv10");

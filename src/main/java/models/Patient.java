@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class Patient {
     
