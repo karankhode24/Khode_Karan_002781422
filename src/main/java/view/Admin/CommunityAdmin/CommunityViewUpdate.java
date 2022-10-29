@@ -213,6 +213,7 @@ public class CommunityViewUpdate extends javax.swing.JPanel {
 
         txtCity.setText(tblCity);
         txtCommunity.setText(tblCommunity);
+        valCommunity.setText(null);
         
     }//GEN-LAST:event_tblDetailsMouseClicked
 

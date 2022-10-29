@@ -23,7 +23,7 @@ public class Validations {
     }
     
     public boolean ValidateUsername(String value) {
-        String PATTERN = "^(?=.{4,20}$)(?![.])[a-zA-Z0-9._]+(?<![.])$";
+        String PATTERN = "^(?=.{3,20}$)(?![.])[a-zA-Z0-9._]+(?<![.])$";
         return MatchPattern(PATTERN, value);
     }
     
@@ -52,20 +52,23 @@ public class Validations {
         return MatchPattern(PATTERN, value);
     }
     
-    public boolean ValidateDate(String value) {
+    public boolean ValidateInt(String value) {
+        String PATTERN = "^[0-9]{1,3}$";
+        return MatchPattern(PATTERN, value);
+    }
+    
+    public boolean ValidateFloat(String value) {
+        String PATTERN = "[+-]?([0-9]*[.])?[0-9]+";
+        return MatchPattern(PATTERN, value);
+    }
+    
+    public boolean ValidateEmpty(String value) {
         return !value.isEmpty();
     }
     
-    public boolean ValidateGender(String value) {
-        return !value.isEmpty();
-    }
-    
-    public boolean ValidateAbout(String value) {
-        return !value.isEmpty();
-    }
-    
-    public boolean ValidateAddress(String value) {
-        return !value.isEmpty();
+    public boolean ValidateBloodPressure(String value) {
+        String PATTERN = "[+-]?((\\d+\\.?\\d*)|(\\.\\d+))";
+        return MatchPattern(PATTERN, value);
     }
     
     private boolean MatchPattern(String pattern, String value) {

@@ -73,7 +73,7 @@ public class CommunityDirectory {
     public Community getCommunity(String cityName, String communityName) {
         for(Community community: communityList)
         {
-            if (community.getCity().getName().toLowerCase().startsWith(cityName.toLowerCase()) || community.getName().toLowerCase().equals(communityName.toLowerCase()))
+            if (community.getCity().getName().toLowerCase().startsWith(cityName.toLowerCase()) && community.getName().toLowerCase().equals(communityName.toLowerCase()))
             {
                 return community;
             }

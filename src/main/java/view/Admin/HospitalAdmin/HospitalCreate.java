@@ -34,6 +34,7 @@ public class HospitalCreate extends javax.swing.JPanel {
         AutoCompleteDecorator.decorate(ddCity);
         AutoCompleteDecorator.decorate(ddCommunity);
             
+        ddCity.removeAllItems();
         ddCity.addItem("");
         for (City city: MainJFrame.cityDirectory.getCityList()) {
             ddCity.addItem(city.getName());
@@ -253,7 +254,7 @@ public class HospitalCreate extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtAboutKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAboutKeyReleased
-        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAbout.getText()) ) {
             valAbout.setText("Details are required");
         }
         else {
@@ -310,12 +311,12 @@ public class HospitalCreate extends javax.swing.JPanel {
             valid = false;
         }
         
-        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAbout.getText()) ) {
             valAbout.setText("Details are required");
             valid = false;
         }
         
-        if (!this.validations.ValidateAddress(txtAddress.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAddress.getText()) ) {
             valAddress.setText("Address is required");
             valid = false;
         }
@@ -393,7 +394,7 @@ public class HospitalCreate extends javax.swing.JPanel {
     }//GEN-LAST:event_txtNameKeyReleased
 
     private void txtAddressKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddressKeyReleased
-        if (!this.validations.ValidateAddress(txtAddress.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAddress.getText()) ) {
             valAddress.setText("Address is required");
         }
         else {

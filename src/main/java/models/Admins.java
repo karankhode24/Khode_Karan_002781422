@@ -8,21 +8,19 @@ package models;
  *
  * @author karan
  */
-public class Admins {
+public class Admins extends Person {
+
+    
     
     public enum AdminType {
     SYSTEM, COMMUNITY, HOSPITAL 
     }
     
-    private Person person;
     private AdminType adminType;
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
+    
+    public Admins(String name, int age, String email, String gender, String phoneNumber, City city, Community community, String username, String password, AdminType type) {
+        super(name, age, email, gender, phoneNumber, city, community, username, password);
+        this.adminType = type;
     }
 
     public AdminType getAdminType() {

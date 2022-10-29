@@ -5,6 +5,8 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Random;
+import view.MainJFrame;
 
 /**
  *
@@ -19,9 +21,14 @@ public class DoctorDirectory {
 
     }
 
-    public Doctor newDoctor(String about, Hospital hospital, Person person) {
+    public Doctor newDoctor(String about, Hospital hospital, String name, int age, String email, String gender, String phoneNumber, City city, Community community, String username, String password) {
+        
+        int doctorID = generateRandomId();
+        while(isDoctorIdExist(doctorID)) {
+            doctorID = generateRandomId();
+        }
 
-        Doctor d = new Doctor(about, hospital, person);
+        Doctor d = new Doctor(about, hospital, doctorID, name, age, email, gender, phoneNumber, city, community, username, password);
         doctorList.add(d);
         hospital.addDoctor(d);
         return d;
@@ -42,4 +49,35 @@ public class DoctorDirectory {
         }
             return null; //not found after going through the whole list
          }
+    
+    public Doctor checkDoctorCredentials(String username, String password) {
+        for (Doctor d : doctorList) {
+            if (d.getUsername().equals(username) && d.getPassword().equals(password)) {
+                return d;
+            }
+        }
+        return null;
+    }
+    
+    private int generateRandomId() {
+        return new Random().nextInt(900000) + 100000;
+    }
+    
+    public boolean isDoctorIdExist(int id) {
+        for (Doctor p : doctorList) {
+            if (p.getDoctorID()== id) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public void deleteDoctor(Doctor d) {
+        for (Encounter e: d.getEncounterList()) {
+            e.getPatient().getEncounterList().remove(e);
+            MainJFrame.encounterDirectory.getEncouterList().remove(e);
+        }
+        doctorList.remove(d);
+        d.getHospital().getDoctorList().remove(d);
+    }
 }

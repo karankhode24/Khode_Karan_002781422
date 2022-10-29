@@ -6,21 +6,38 @@ import java.util.ArrayList;
  *
  * @author karan
  */
-public class Patient {
+public class Patient extends Person {
     
     private int patientID;
-    private String primaryDoctorName;
-    private String prefferedPharmacy;
-    private ArrayList<Encounter> encounterList = new ArrayList();
-    private Person person;
+    private String issue;
+    private ArrayList<Encounter> encounterList;
     private House house;
-
-    public Person getPerson() {
-        return person;
+    private Hospital hospital;
+    
+    public Patient (String issue, House house, int patientID, Hospital hospital, String name, int age, String email, String gender, String phoneNumber, City city, Community community, String username, String password){
+        super( name,  age,  email,  gender,  phoneNumber,  city,  community,  username,  password);
+        this.issue = issue;
+        this.patientID = patientID;
+        this.house = house;
+        this.hospital = hospital;
+        
+        encounterList = new  ArrayList();
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
+    public Hospital getHospital() {
+        return hospital;
+    }
+
+    public void setHospital(Hospital hospital) {
+        this.hospital = hospital;
+    }
+    
+    public String getIssue() {
+        return issue;
+    }
+
+    public void setIssue(String issue) {
+        this.issue = issue;
     }
 
     public House getHouse() {
@@ -35,8 +52,8 @@ public class Patient {
         return encounterList;
     }
 
-    public void setEncounterList(ArrayList<Encounter> encounterList) {
-        this.encounterList = encounterList;
+    public void setEncounter(Encounter encounter) {
+        this.encounterList.add(encounter);
     }
     
     
@@ -48,20 +65,8 @@ public class Patient {
         this.patientID = patientID;
     }
     
-    public String getPrimaryDoctorName() {
-        return primaryDoctorName;
+    public boolean isMatch(String name){
+        if(this.getName().equals(name)) return true;
+        return false;
     }
-    
-    public void setPrimaryDoctorName(String primaryDoctorName) {
-        this.primaryDoctorName = primaryDoctorName;
-    }
-    
-    public String getPrefferedPharmacy() {
-        return prefferedPharmacy;
-    }
-    
-    public void setPrefferedPharmacy(String prefferedPharmacy) {
-        this.prefferedPharmacy = prefferedPharmacy;
-    }
-    
 }

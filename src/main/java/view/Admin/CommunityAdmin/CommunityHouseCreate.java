@@ -31,8 +31,8 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
             
         ddCity.removeAllItems();
         ddCity.addItem("");
-        for (City city: MainJFrame.cityDirectory.getCityList()) {
-            ddCity.addItem(city.getName());
+        for (City c: MainJFrame.cityDirectory.getCityList()) {
+            ddCity.addItem(c.getName());
         }
         ddCity.setSelectedItem("");
     }

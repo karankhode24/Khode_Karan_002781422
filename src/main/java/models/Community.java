@@ -22,9 +22,10 @@ public class Community {
 
     }
     
-    public void addHouse(String a1, String a2) {
+    public House addHouse(String a1, String a2) {
         House h = new House(a1, a2);
         house.add(h); 
+        return h;
     }
     
     public ArrayList<House> getHouseList() {
@@ -44,16 +45,29 @@ public class Community {
     }
     
     public Boolean isAddressExist(String addressLine1, String addressLine2) {
-        String fullAddress = addressLine1 + " " + addressLine2;
+        String fullAddress = addressLine1 + addressLine2;
         
         for (House h: house) {
             
-            if (h.getFullAddress().startsWith(fullAddress)) {
+            if (h.checkAddress().startsWith(fullAddress)) {
                 return true;
             }
         }
         
         return false;
+    }
+    
+    public House getHouseObject(String addressLine1, String addressLine2) {
+        String fullAddress = addressLine1 + addressLine2;
+        
+        for (House h: house) {
+            
+            if (h.checkAddress().startsWith(fullAddress)) {
+                return h;
+            }
+        }
+        
+        return null;
     }
     
 //    public 

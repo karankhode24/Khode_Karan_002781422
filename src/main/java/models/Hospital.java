@@ -36,6 +36,10 @@ public class Hospital {
         doctorList.add(doctor);
     }
     
+    public void addPatient(Patient patient) {
+        patientList.add(patient);
+    }
+    
     public int getZipCode() {
         return zipCode;
     }
@@ -98,5 +102,25 @@ public class Hospital {
 
     public void setPatientList(ArrayList<Patient> patientList) {
         this.patientList = patientList;
+    }
+    
+    public Doctor getDoctorByName(String doctor) {
+        for (Doctor d: doctorList) {
+            if (d.getName().equals(doctor)) {
+                return d;
+            }
+        }
+        
+        return null;
+    }
+    
+    public Patient getPatientByName(String patient) {
+        for (Patient d: patientList) {
+            if (d.getName().equals(patient)) {
+                return d;
+            }
+        }
+        
+        return null;
     }
 }

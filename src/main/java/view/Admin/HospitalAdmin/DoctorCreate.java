@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import models.City;
 import models.Community;
-import models.Doctor;
 import models.Hospital;
 import models.Person;
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
@@ -31,7 +30,6 @@ public class DoctorCreate extends javax.swing.JPanel {
     City city;
     Community community;
     Hospital hospital;
-    boolean formValid;
     
     public DoctorCreate() {
         initComponents();
@@ -41,9 +39,8 @@ public class DoctorCreate extends javax.swing.JPanel {
         
         ddCity.removeAllItems();
         ddCity.addItem("");
-        for (City city: MainJFrame.cityDirectory.getCityList()) {
-            System.out.println(city);
-            ddCity.addItem(city.getName());
+        for (City c: MainJFrame.cityDirectory.getCityList()) {
+            ddCity.addItem(c.getName());
         }
         ddCity.setSelectedItem("");
         validations = new Validations();
@@ -447,7 +444,7 @@ public class DoctorCreate extends javax.swing.JPanel {
             valid = false;
         }
 
-        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAbout.getText()) ) {
             valAbout.setText("Details are required");
             valid = false;
         }
@@ -503,8 +500,7 @@ public class DoctorCreate extends javax.swing.JPanel {
                 gender = "Other";
             }
             
-            Person p = MainJFrame.personDirectory.newPerson(txtName.getText(), Integer.parseInt(txtAge.getText()), txtEmail.getText(), gender, txtPhoneNumber.getText(), city, community, txtUsername.getText(), String.valueOf(txtPassword.getPassword()));
-            MainJFrame.doctorDirectory.newDoctor(txtAbout.getText(), this.hospital, p);
+            MainJFrame.doctorDirectory.newDoctor(txtAbout.getText(), this.hospital, txtName.getText(), Integer.parseInt(txtAge.getText()), txtEmail.getText(), gender, txtPhoneNumber.getText(), city, community, txtUsername.getText(), String.valueOf(txtPassword.getPassword()));
             JOptionPane.showMessageDialog(this, "Doctor details Added");
             setTextNull();
             setValidationNull();
@@ -644,7 +640,7 @@ public class DoctorCreate extends javax.swing.JPanel {
     }//GEN-LAST:event_txtUsernameKeyReleased
 
     private void txtAboutKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAboutKeyReleased
-        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAbout.getText()) ) {
             valAbout.setText("Description is required");
         } else {
             valAbout.setText(null);
@@ -661,8 +657,6 @@ public class DoctorCreate extends javax.swing.JPanel {
         if (hospitalName.toString().equals("")) {
             valHospital.setText("Please Select Hospital");
         } else {
-            System.out.println("yaha");
-            System.out.println(hospitalName.toString());
             valHospital.setText(null);
             hospital = MainJFrame.hospitalDirectory.getHospitalObject(hospitalName.toString(), city, community);
 

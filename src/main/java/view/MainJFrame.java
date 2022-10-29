@@ -8,13 +8,18 @@ import java.awt.Color;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import javax.swing.JTextField;
+import models.AdminDirectory;
 import models.CityDirectory;
 import models.CommunityDirectory;
 import models.DoctorDirectory;
+import models.EncounterDirectory;
 import models.HospitalDirectory;
+import models.LoginSession;
+import models.PatientDirectory;
 import models.PersonDirectory;
 import view.Admin.AdminJFrame;
 import resources.CreateDefaultData;
+import view.login.LoginView;
 
 /**
  *
@@ -32,11 +37,19 @@ public class MainJFrame extends javax.swing.JFrame {
     public static HospitalDirectory hospitalDirectory = new HospitalDirectory();
     public static DoctorDirectory doctorDirectory  = new DoctorDirectory();
     public static PersonDirectory personDirectory = new PersonDirectory();
+    public static PatientDirectory patientDirectory = new PatientDirectory();
+    public static EncounterDirectory encounterDirectory = new EncounterDirectory();
+    public static AdminDirectory adminDirectory = new AdminDirectory();
+    public static LoginSession loginSession = new LoginSession();
+    private static boolean create = true;
     
     public MainJFrame() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(102, 255, 204));
-        CreateDefaultData.createData();
+        if (create) {
+            CreateDefaultData.createData();
+            create = false; 
+        }
         setLocationRelativeTo(null);
     }
 
@@ -72,6 +85,11 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         btn_doctors.setText("Doctors");
+        btn_doctors.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_doctorsActionPerformed(evt);
+            }
+        });
 
         btn_person.setText("Patient");
         btn_person.addActionListener(new java.awt.event.ActionListener() {
@@ -123,13 +141,19 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_personActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_personActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new LoginView("patient").setVisible(true);
     }//GEN-LAST:event_btn_personActionPerformed
 
     private void btn_adminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adminsActionPerformed
         this.dispose();
         new AdminJFrame().setVisible(true);
     }//GEN-LAST:event_btn_adminsActionPerformed
+
+    private void btn_doctorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_doctorsActionPerformed
+        this.dispose();
+        new LoginView("doctor").setVisible(true);
+    }//GEN-LAST:event_btn_doctorsActionPerformed
 
     /**
      * @param args the command line arguments

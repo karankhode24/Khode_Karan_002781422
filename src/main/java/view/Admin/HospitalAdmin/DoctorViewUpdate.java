@@ -461,7 +461,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
             valid = false;
         }
 
-        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAbout.getText()) ) {
             valAbout.setText("Details are required");
             valid = false;
         }
@@ -517,13 +517,19 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
                 gender = "Other";
             }
             
-//            selectedDetails.getPerson().setAge(Integer.parseInt(txtAge.getText()));
-//            selectedDetails.getPerson().setAge(txtAge.getText());
-//            
-//            MainJFrame.doctorDirectory.newDoctor(txtAbout.getText(), this.hospital, p);
-            JOptionPane.showMessageDialog(this, "Doctor details Added");
+            selectedDetails.setAge(Integer.parseInt(txtAge.getText()));
+            selectedDetails.setName(txtName.getText());
+            selectedDetails.setGender(gender);
+            selectedDetails.setPhoneNumber(txtPhoneNumber.getText());
+            selectedDetails.setUsername(txtUsername.getText());
+            selectedDetails.setPassword(String.valueOf(txtPassword.getPassword()));
+            selectedDetails.setEmail(txtEmail.getText());
+            selectedDetails.setAbout(txtAbout.getText());
+            
+            JOptionPane.showMessageDialog(this, "Doctor details Updated");
             setTextNull();
             setValidationNull();
+            populateTable();
 
         }
     }//GEN-LAST:event_btnUpdateActionPerformed
@@ -695,7 +701,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
     }//GEN-LAST:event_txtPasswordKeyReleased
 
     private void txtAboutKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAboutKeyReleased
-        if (!this.validations.ValidateAbout(txtAbout.getText()) ) {
+        if (!this.validations.ValidateEmpty(txtAbout.getText()) ) {
             valAbout.setText("Details are required");
         }
         else {
@@ -710,16 +716,16 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         
         for (Doctor c : MainJFrame.doctorDirectory.getDoctorList()){
             Object[] row = new Object[12];
-            row[0] = c.getPerson().getCity().getName();
-            row[1] = c.getPerson().getCommunity().getName();
+            row[0] = c.getCity().getName();
+            row[1] = c.getCommunity().getName();
             row[2] = c.getHospital().getName();
-            row[3] = c.getPerson().getName();
-            row[4] = c.getPerson().getAge();
-            row[5] = c.getPerson().getGender();
-            row[6] = c.getPerson().getPhoneNumber();
-            row[7] = c.getPerson().getEmail();
-            row[8] = c.getPerson().getUsername();
-            row[9] = c.getPerson().getPassword();
+            row[3] = c.getName();
+            row[4] = c.getAge();
+            row[5] = c.getGender();
+            row[6] = c.getPhoneNumber();
+            row[7] = c.getEmail();
+            row[8] = c.getUsername();
+            row[9] = c.getPassword();
             row[10] = c.getAbout();
             row[11] = c;
             

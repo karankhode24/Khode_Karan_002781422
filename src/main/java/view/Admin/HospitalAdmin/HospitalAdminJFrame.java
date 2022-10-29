@@ -5,6 +5,7 @@
 package view.Admin.HospitalAdmin;
 
 import view.Admin.AdminJFrame;
+import view.MainJFrame;
 
 /**
  *
@@ -86,7 +87,7 @@ public class HospitalAdminJFrame extends javax.swing.JFrame {
 
         btn_back_admin.setBackground(new java.awt.Color(255, 255, 255));
         btn_back_admin.setForeground(new java.awt.Color(51, 51, 255));
-        btn_back_admin.setText("<- Back");
+        btn_back_admin.setText("<- Logout");
         btn_back_admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_back_adminActionPerformed(evt);
@@ -175,6 +176,8 @@ public class HospitalAdminJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_encountersActionPerformed
 
     private void btn_back_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_back_adminActionPerformed
+        MainJFrame.loginSession.setObject(null);
+        
         this.dispose();
         new AdminJFrame().setVisible(true);
     }//GEN-LAST:event_btn_back_adminActionPerformed

@@ -38,4 +38,8 @@ public class House {
         return addressLine1 + " " + addressLine2;
     }
     
+    public String checkAddress() {
+        return addressLine1 + addressLine2;
+    }
+    
 }

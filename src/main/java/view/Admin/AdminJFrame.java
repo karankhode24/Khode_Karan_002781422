@@ -7,6 +7,7 @@ package view.Admin;
 import view.Admin.CommunityAdmin.CommunityAdmin;
 import view.Admin.HospitalAdmin.HospitalAdminJFrame;
 import view.MainJFrame;
+import view.login.LoginView;
 
 /**
  *
@@ -117,17 +118,21 @@ public class AdminJFrame extends javax.swing.JFrame {
 
     private void btn_system_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_system_adminActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
+        new LoginView("system").setVisible(true);
     }//GEN-LAST:event_btn_system_adminActionPerformed
 
     private void btn_hospital_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hospital_adminActionPerformed
+        
         this.dispose();
-        new HospitalAdminJFrame().setVisible(true);
+        new LoginView("hospital").setVisible(true);
+        
     }//GEN-LAST:event_btn_hospital_adminActionPerformed
 
     private void btn_community_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_community_adminActionPerformed
         this.dispose();
-        new CommunityAdmin().setVisible(true);
+        new LoginView("community").setVisible(true);
+        
     }//GEN-LAST:event_btn_community_adminActionPerformed
 
     /**
