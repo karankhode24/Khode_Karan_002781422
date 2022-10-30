@@ -69,6 +69,8 @@ public class PatientAppointment extends javax.swing.JPanel {
         datePicker = new com.github.lgooddatepicker.components.DatePicker();
         valDate = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         tblDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -105,6 +107,7 @@ public class PatientAppointment extends javax.swing.JPanel {
 
         lblDoctorRecord.setText("Community Doctors");
         lblDoctorRecord.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
 
         txtGender.setEditable(false);
 
@@ -114,12 +117,15 @@ public class PatientAppointment extends javax.swing.JPanel {
 
         lblCommunity4.setText("Gender :");
         lblCommunity4.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lblCommunity4.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity3.setText("Hospital :");
         lblCommunity3.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lblCommunity3.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity1.setText("Community :");
         lblCommunity1.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(204, 204, 0));
 
         btn_create.setText("Create");
         btn_create.addActionListener(new java.awt.event.ActionListener() {
@@ -130,9 +136,11 @@ public class PatientAppointment extends javax.swing.JPanel {
 
         lblCity.setText("Doctor :");
         lblCity.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity.setText("About :");
         lblCommunity.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
         txtDoctor.setEditable(false);
 

@@ -112,6 +112,7 @@ public class PatientCreate extends javax.swing.JPanel {
 
         btnGender.add(btnFemale);
         btnFemale.setText("Female");
+        btnFemale.setBackground(new java.awt.Color(204, 204, 0));
         btnFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFemaleActionPerformed(evt);
@@ -176,6 +177,7 @@ public class PatientCreate extends javax.swing.JPanel {
 
         btnGender.add(btnOther);
         btnOther.setText("Other");
+        btnOther.setBackground(new java.awt.Color(204, 204, 0));
         btnOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOtherActionPerformed(evt);
@@ -249,6 +251,7 @@ public class PatientCreate extends javax.swing.JPanel {
 
         btnGender.add(btnMale);
         btnMale.setText("Male");
+        btnMale.setBackground(new java.awt.Color(204, 204, 0));
         btnMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMaleActionPerformed(evt);
@@ -393,10 +396,9 @@ public class PatientCreate extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(valGender, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnMale)
-                            .addComponent(lblGender))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnMale)
+                        .addComponent(lblGender)
                         .addComponent(btnFemale)
                         .addComponent(btnOther)))
                 .addGap(18, 18, 18)

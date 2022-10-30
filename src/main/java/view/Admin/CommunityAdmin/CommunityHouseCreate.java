@@ -101,11 +101,11 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
 
         lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine2.setForeground(new java.awt.Color(204, 204, 0));
-        lblAddressLine2.setText("Address Line 2 :");
+        lblAddressLine2.setText("Address 2 :");
 
         lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine1.setForeground(new java.awt.Color(204, 204, 0));
-        lblAddressLine1.setText("Address Line 1 :");
+        lblAddressLine1.setText("Address 1 :");
 
         txtAddressLine1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -158,7 +158,7 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(valCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(txtAddressLine2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(132, Short.MAX_VALUE))))
+                        .addContainerGap(160, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

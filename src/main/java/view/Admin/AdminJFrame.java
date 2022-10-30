@@ -20,7 +20,7 @@ public class AdminJFrame extends javax.swing.JFrame {
      */
     public AdminJFrame() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(102, 255, 204));
+        getContentPane().setBackground(new java.awt.Color(0, 0, 0));
         setLocationRelativeTo(null);
     }
 
@@ -40,11 +40,14 @@ public class AdminJFrame extends javax.swing.JFrame {
         btn_hospital_admin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
         lbl_admin.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 1, 18)); // NOI18N
-        lbl_admin.setText("Select the type of admin");
+        lbl_admin.setForeground(new java.awt.Color(204, 204, 0));
+        lbl_admin.setText("Admin type");
 
-        btn_back_main.setText("<- Back");
+        btn_back_main.setText("Back");
+        btn_back_main.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_back_main.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_back_mainActionPerformed(evt);
@@ -52,6 +55,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         });
 
         btn_system_admin.setText("System Admin");
+        btn_system_admin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_system_admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_system_adminActionPerformed(evt);
@@ -59,6 +63,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         });
 
         btn_community_admin.setText("Community Admin");
+        btn_community_admin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_community_admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_community_adminActionPerformed(evt);
@@ -66,6 +71,7 @@ public class AdminJFrame extends javax.swing.JFrame {
         });
 
         btn_hospital_admin.setText("Hospital Admin");
+        btn_hospital_admin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_hospital_admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_hospital_adminActionPerformed(evt);
@@ -78,18 +84,18 @@ public class AdminJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btn_back_main, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(108, 108, 108)
+                        .addComponent(lbl_admin))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btn_system_admin)
-                        .addGap(38, 38, 38)
-                        .addComponent(btn_community_admin)
-                        .addGap(36, 36, 36)
-                        .addComponent(btn_hospital_admin))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn_back_main)
-                        .addGap(32, 32, 32)
-                        .addComponent(lbl_admin)))
-                .addContainerGap(95, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_community_admin)))
+                .addGap(56, 56, 56)
+                .addComponent(btn_hospital_admin)
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +109,7 @@ public class AdminJFrame extends javax.swing.JFrame {
                     .addComponent(btn_system_admin)
                     .addComponent(btn_community_admin)
                     .addComponent(btn_hospital_admin))
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
 
         pack();

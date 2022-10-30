@@ -34,6 +34,7 @@ public class DoctorEncounters extends javax.swing.JFrame {
     public DoctorEncounters() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(new java.awt.Color(0, 0, 0));
         MainJFrame.defaultSearchText(txtSearch, "Search by city or community");
         validations = new Validations();
         populateTable();

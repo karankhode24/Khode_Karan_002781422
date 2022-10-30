@@ -73,7 +73,7 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
         lblAddressLine1.setBackground(new java.awt.Color(204, 204, 0));
         lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine1.setForeground(new java.awt.Color(204, 204, 0));
-        lblAddressLine1.setText("Address Line 1 :");
+        lblAddressLine1.setText("Address 1 :");
 
         valAddress.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAddress.setForeground(new java.awt.Color(255, 0, 0));
@@ -141,7 +141,7 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
         lblAddressLine2.setBackground(new java.awt.Color(204, 204, 0));
         lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine2.setForeground(new java.awt.Color(204, 204, 0));
-        lblAddressLine2.setText("Address Line 2 :");
+        lblAddressLine2.setText("Address 2 :");
 
         txtAddressLine2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {

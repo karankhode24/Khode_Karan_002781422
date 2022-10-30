@@ -208,6 +208,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         });
 
         btnGender.add(btnMale);
+        btnMale.setForeground(new java.awt.Color(204, 204, 0));
         btnMale.setText("Male");
         btnMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,6 +217,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         });
 
         btnGender.add(btnFemale);
+        btnFemale.setForeground(new java.awt.Color(204, 204, 0));
         btnFemale.setText("Female");
         btnFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,6 +240,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         });
 
         btnGender.add(btnOther);
+        btnOther.setForeground(new java.awt.Color(204, 204, 0));
         btnOther.setText("Other");
         btnOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -376,7 +379,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
                                     .addComponent(valAge, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(valPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(valEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(314, 314, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

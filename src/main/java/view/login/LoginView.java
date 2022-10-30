@@ -91,9 +91,11 @@ public class LoginView extends javax.swing.JFrame {
         lblPassword.setForeground(new java.awt.Color(255, 255, 0));
         lblPassword.setText("Password:");
 
-        txtPassword.setForeground(new java.awt.Color(255, 255, 0));
-
-        txtUsername.setForeground(new java.awt.Color(255, 255, 0));
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsernameActionPerformed(evt);
+            }
+        });
 
         btnLogin.setForeground(new java.awt.Color(204, 204, 0));
         btnLogin.setText("Login");
@@ -249,6 +251,10 @@ public class LoginView extends javax.swing.JFrame {
         p.setVisible(true);
         
     }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsernameActionPerformed
 
     /**
      * @param args the command line arguments

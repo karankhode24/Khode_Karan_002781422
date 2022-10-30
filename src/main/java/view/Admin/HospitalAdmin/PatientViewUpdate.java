@@ -111,6 +111,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
             }
         });
 
+        btnMale.setBackground(new java.awt.Color(204, 204, 0));
         btnGender.add(btnMale);
         btnMale.setText("Male");
         btnMale.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +120,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
             }
         });
 
+        btnFemale.setBackground(new java.awt.Color(204, 204, 0));
         btnGender.add(btnFemale);
         btnFemale.setText("Female");
         btnFemale.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +156,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
             }
         });
 
+        btnOther.setBackground(new java.awt.Color(204, 204, 0));
         btnGender.add(btnOther);
         btnOther.setText("Other");
         btnOther.addActionListener(new java.awt.event.ActionListener() {

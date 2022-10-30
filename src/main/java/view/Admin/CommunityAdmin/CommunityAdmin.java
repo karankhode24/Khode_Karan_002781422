@@ -52,16 +52,16 @@ public class CommunityAdmin extends javax.swing.JFrame {
 
         controlPanel.setBackground(new java.awt.Color(0, 0, 0));
 
-        btn_community.setText("Community");
         btn_community.setForeground(new java.awt.Color(51, 51, 255));
+        btn_community.setText("Community");
         btn_community.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_communityActionPerformed(evt);
             }
         });
 
-        btn_houses.setText("Houses");
         btn_houses.setForeground(new java.awt.Color(51, 51, 255));
+        btn_houses.setText("Address");
         btn_houses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_housesActionPerformed(evt);

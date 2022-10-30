@@ -52,64 +52,64 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
 
         controlPanel.setBackground(new java.awt.Color(0, 0, 0));
 
-        btn_hospitals.setForeground(new java.awt.Color(51, 51, 255));
         btn_hospitals.setText("Hospitals");
+        btn_hospitals.setForeground(new java.awt.Color(51, 51, 255));
         btn_hospitals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_hospitalsActionPerformed(evt);
             }
         });
 
-        btn_doctors.setForeground(new java.awt.Color(51, 51, 255));
         btn_doctors.setText("Doctors");
+        btn_doctors.setForeground(new java.awt.Color(51, 51, 255));
         btn_doctors.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_doctorsActionPerformed(evt);
             }
         });
 
-        btn_patients.setForeground(new java.awt.Color(51, 51, 255));
         btn_patients.setText("Patients");
+        btn_patients.setForeground(new java.awt.Color(51, 51, 255));
         btn_patients.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_patientsActionPerformed(evt);
             }
         });
 
-        btn_encounters.setForeground(new java.awt.Color(51, 51, 255));
         btn_encounters.setText("Encounters");
+        btn_encounters.setForeground(new java.awt.Color(51, 51, 255));
         btn_encounters.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_encountersActionPerformed(evt);
             }
         });
 
-        btn_back_admin.setForeground(new java.awt.Color(51, 51, 255));
         btn_back_admin.setText("<- Logout");
+        btn_back_admin.setForeground(new java.awt.Color(51, 51, 255));
         btn_back_admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_back_adminActionPerformed(evt);
             }
         });
 
-        btn_community.setForeground(new java.awt.Color(51, 51, 255));
         btn_community.setText("Community");
+        btn_community.setForeground(new java.awt.Color(51, 51, 255));
         btn_community.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_communityActionPerformed(evt);
             }
         });
 
-        btn_houses.setForeground(new java.awt.Color(51, 51, 255));
         btn_houses.setText("Houses");
+        btn_houses.setForeground(new java.awt.Color(51, 51, 255));
         btn_houses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_housesActionPerformed(evt);
             }
         });
 
-        btn_houses1.setForeground(new java.awt.Color(51, 51, 255));
         btn_houses1.setText("Create Admin");
+        btn_houses1.setForeground(new java.awt.Color(51, 51, 255));
         btn_houses1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_houses1ActionPerformed(evt);
