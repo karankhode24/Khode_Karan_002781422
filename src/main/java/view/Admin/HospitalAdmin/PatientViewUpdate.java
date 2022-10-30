@@ -87,6 +87,9 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         lblHouse = new javax.swing.JLabel();
         ddHouse = new javax.swing.JComboBox<>();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+        setForeground(new java.awt.Color(204, 204, 0));
+
         valIssue.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valIssue.setForeground(new java.awt.Color(255, 0, 0));
 
@@ -125,9 +128,11 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         });
 
         lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(204, 204, 0));
         lblUsername.setText("Username :");
 
         lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(204, 204, 0));
         lblPassword.setText("Password :");
 
         btnUpdate.setText("Update");
@@ -216,6 +221,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         valAge.setForeground(new java.awt.Color(255, 0, 0));
 
         lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
         lblDoctorRecord.setText("Patient Records");
 
         btn_create.setText("Create");
@@ -226,6 +232,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         });
 
         lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
         lblName.setText("Name :");
 
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -235,20 +242,24 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         });
 
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
         lblCity.setText("City :");
 
         valGender.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valGender.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity.setText("Id :");
 
         lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
         lblAge.setText("Age :");
 
         txtCity.setEditable(false);
 
         lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 0));
         lblGender.setText("Gender :");
 
         txtId.setEditable(false);
@@ -257,6 +268,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         valPhone.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity1.setText("Hospital :");
 
         valEmail.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -265,15 +277,18 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         txtHospital.setEditable(false);
 
         lblIssue.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblIssue.setForeground(new java.awt.Color(204, 204, 0));
         lblIssue.setText("Issue :");
 
         lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(204, 204, 0));
         lblPhoneNumber.setText("Number :");
 
         valUsername.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valUsername.setForeground(new java.awt.Color(255, 0, 0));
 
         lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(204, 204, 0));
         lblEmail.setText("Email :");
 
         valPassword.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -295,6 +310,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
         valHouse.setForeground(new java.awt.Color(255, 0, 0));
 
         lblHouse.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblHouse.setForeground(new java.awt.Color(204, 204, 0));
         lblHouse.setText("House :");
 
         ddHouse.setEditable(true);
@@ -477,7 +493,7 @@ public class PatientViewUpdate extends javax.swing.JPanel {
                     .addComponent(valHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
-    }// </editor-fold>                        ate void txtIssueKeyReleased(java.awt.event.KeyEvent evt) {//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:initComponents
                                          
     private void txtIssueKeyReleased(java.awt.event.KeyEvent evt) {  
         if (!this.validations.ValidateEmpty(txtIssue.getText()) ) {

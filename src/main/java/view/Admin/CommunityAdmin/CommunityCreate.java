@@ -74,10 +74,15 @@ public class CommunityCreate extends javax.swing.JPanel {
         btn_back_community_admin = new javax.swing.JButton();
         val_community = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+        setForeground(new java.awt.Color(204, 204, 0));
+
         jLabel1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
         jLabel1.setText("City : ");
 
         jLabel2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 0));
         jLabel2.setText("Community :");
 
         dd_city.addActionListener(new java.awt.event.ActionListener() {

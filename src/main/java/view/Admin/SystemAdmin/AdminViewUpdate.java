@@ -84,6 +84,8 @@ public class AdminViewUpdate extends javax.swing.JPanel {
         btnDelete = new javax.swing.JButton();
         valAdmin = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         txtPhoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPhoneNumberKeyReleased(evt);
@@ -112,11 +114,13 @@ public class AdminViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblUsername.setText("Username :");
+        lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblPassword.setText("Password :");
+        lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(204, 204, 0));
 
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -200,8 +204,9 @@ public class AdminViewUpdate extends javax.swing.JPanel {
         valAge.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAge.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblDoctorRecord.setText("Admin Records");
+        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
 
         btn_create.setText("Create");
         btn_create.addActionListener(new java.awt.event.ActionListener() {
@@ -210,8 +215,9 @@ public class AdminViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblName.setText("Name :");
+        lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
 
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -219,22 +225,26 @@ public class AdminViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City :");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
         valGender.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valGender.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community :");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblAge.setText("Age :");
+        lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
 
         txtCity.setEditable(false);
 
-        lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblGender.setText("Gender :");
+        lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 0));
 
         txtCommunity.setEditable(false);
 
@@ -244,14 +254,16 @@ public class AdminViewUpdate extends javax.swing.JPanel {
         valEmail.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valEmail.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblPhoneNumber.setText("Number :");
+        lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(204, 204, 0));
 
         valUsername.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valUsername.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblEmail.setText("Email :");
+        lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(204, 204, 0));
 
         valPassword.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valPassword.setForeground(new java.awt.Color(255, 0, 0));
@@ -268,8 +280,9 @@ public class AdminViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblHouse.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblHouse.setText("Admin type :");
+        lblHouse.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblHouse.setForeground(new java.awt.Color(204, 204, 0));
 
         ddAdmin.setEditable(true);
         ddAdmin.addActionListener(new java.awt.event.ActionListener() {

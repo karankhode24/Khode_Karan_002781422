@@ -47,29 +47,26 @@ public class PatientView extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 255, 204));
         setPreferredSize(new java.awt.Dimension(900, 800));
 
-        controlPanel.setBackground(new java.awt.Color(153, 255, 204));
+        controlPanel.setBackground(new java.awt.Color(0, 0, 0));
 
-        btn_back_admin1.setText("<- Logout");
-        btn_back_admin1.setBackground(new java.awt.Color(255, 255, 255));
         btn_back_admin1.setForeground(new java.awt.Color(51, 51, 255));
+        btn_back_admin1.setText("<- Logout");
         btn_back_admin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_back_admin1ActionPerformed(evt);
             }
         });
 
-        btnDetails.setText("Details");
-        btnDetails.setBackground(new java.awt.Color(255, 255, 255));
         btnDetails.setForeground(new java.awt.Color(51, 51, 255));
+        btnDetails.setText("Details");
         btnDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDetailsActionPerformed(evt);
             }
         });
 
-        btnAppointment.setText("Appointment");
-        btnAppointment.setBackground(new java.awt.Color(255, 255, 255));
         btnAppointment.setForeground(new java.awt.Color(51, 51, 255));
+        btnAppointment.setText("Appointment");
         btnAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAppointmentActionPerformed(evt);
@@ -82,30 +79,27 @@ public class PatientView extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_back_admin1)
-                    .addComponent(btnDetails))
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_back_admin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAppointment)
-                .addContainerGap())
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(btn_back_admin1)
-                .addGap(124, 124, 124)
+                .addGap(18, 18, 18)
                 .addComponent(btnDetails)
                 .addGap(18, 18, 18)
                 .addComponent(btnAppointment)
-                .addContainerGap(759, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
 
-        workArea.setBackground(new java.awt.Color(204, 255, 255));
+        workArea.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
@@ -115,7 +109,7 @@ public class PatientView extends javax.swing.JFrame {
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGap(0, 406, Short.MAX_VALUE)
         );
 
         splitPane.setRightComponent(workArea);

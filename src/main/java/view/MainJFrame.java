@@ -45,7 +45,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     public MainJFrame() {
         initComponents();
-        getContentPane().setBackground(new java.awt.Color(102, 255, 204));
+        getContentPane().setBackground(new java.awt.Color(0, 0, 0));
         if (create) {
             CreateDefaultData.createData();
             create = false; 
@@ -73,9 +73,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         lbl_title.setBackground(new java.awt.Color(255, 51, 51));
         lbl_title.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 1, 36)); // NOI18N
-        lbl_title.setForeground(new java.awt.Color(255, 51, 51));
-        lbl_title.setText("Health UP");
-        lbl_title.setSize(new java.awt.Dimension(60, 17));
+        lbl_title.setForeground(new java.awt.Color(153, 153, 0));
+        lbl_title.setText("Healthup");
 
         btn_admins.setText("Admins");
         btn_admins.addActionListener(new java.awt.event.ActionListener() {
@@ -98,6 +97,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
         jLabel1.setText("Please select the login type");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

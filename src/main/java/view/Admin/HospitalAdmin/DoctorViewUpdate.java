@@ -82,6 +82,8 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         valAbout = new javax.swing.JLabel();
         txtAbout = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +147,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         }
 
         lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
         lblDoctorRecord.setText("Doctor Records");
 
         btn_create.setText("Create");
@@ -155,9 +158,11 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         });
 
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
         lblCity.setText("City :");
 
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity.setText("Community :");
 
         txtCity.setEditable(false);
@@ -165,14 +170,17 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         txtCommunity.setEditable(false);
 
         lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity1.setText("Hospital :");
 
         txtHospital.setEditable(false);
 
         lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(204, 204, 0));
         lblPhoneNumber.setText("Number :");
 
         lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(204, 204, 0));
         lblEmail.setText("Email :");
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -216,9 +224,11 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         });
 
         lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(204, 204, 0));
         lblUsername.setText("Username :");
 
         lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(204, 204, 0));
         lblPassword.setText("Password :");
 
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -242,6 +252,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         valAge.setForeground(new java.awt.Color(255, 0, 0));
 
         lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
         lblName.setText("Name :");
 
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -254,9 +265,11 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         valGender.setForeground(new java.awt.Color(255, 0, 0));
 
         lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
         lblAge.setText("Age :");
 
         lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 0));
         lblGender.setText("Gender :");
 
         valPhone.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -266,6 +279,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         valEmail.setForeground(new java.awt.Color(255, 0, 0));
 
         lblPassword1.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword1.setForeground(new java.awt.Color(204, 204, 0));
         lblPassword1.setText("About :");
 
         valUsername.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -315,19 +329,19 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
                                     .addComponent(lblPassword1, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(41, 41, 41)
+                                        .addGap(47, 47, 47)
                                         .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(valName, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(40, 40, 40)
+                                        .addGap(46, 46, 46)
                                         .addComponent(txtAbout)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(valAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(40, 40, 40)
+                                        .addGap(46, 46, 46)
                                         .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(valPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(188, 188, 188)
@@ -386,16 +400,17 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
                     .addComponent(btnUpdate))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblCommunity1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(valName, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblName)
-                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(8, 8, 8)
+                            .addComponent(lblName)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(valAge, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

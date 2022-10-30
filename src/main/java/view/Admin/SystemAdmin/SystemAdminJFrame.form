@@ -46,7 +46,7 @@
         <Container class="javax.swing.JPanel" name="controlPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="ff" red="99" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -60,17 +60,17 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btn_back_admin" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_hospitals" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_doctors" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_patients" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_encounters" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_community" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_houses" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btn_houses1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btn_houses" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_doctors" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_hospitals" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_community" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_houses1" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="btn_encounters" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_patients" alignment="1" min="-2" pref="89" max="-2" attributes="0"/>
+                          <Component id="btn_back_admin" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -101,9 +101,6 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btn_hospitals">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -115,9 +112,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_doctors">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -129,9 +123,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_patients">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -143,9 +134,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_encounters">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -157,9 +145,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_back_admin">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -171,9 +156,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_community">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -185,9 +167,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_houses">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -199,9 +178,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_houses1">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
@@ -216,7 +192,7 @@
         <Container class="javax.swing.JPanel" name="workArea">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>

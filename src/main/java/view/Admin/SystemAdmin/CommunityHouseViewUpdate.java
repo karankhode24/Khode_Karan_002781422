@@ -56,6 +56,8 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
         txtCity = new javax.swing.JTextField();
         lblCity = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,11 +65,13 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community :");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine1.setText("Address Line 1 :");
+        lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine1.setForeground(new java.awt.Color(204, 204, 0));
 
         valAddress.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAddress.setForeground(new java.awt.Color(255, 0, 0));
@@ -127,11 +131,13 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
             tblDetails.getColumnModel().getColumn(5).setMaxWidth(0);
         }
 
-        lblHouseRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblHouseRecord.setText("House Record");
+        lblHouseRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblHouseRecord.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine2.setText("Address Line 2 :");
+        lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine2.setForeground(new java.awt.Color(204, 204, 0));
 
         txtAddressLine2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -141,8 +147,9 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
 
         txtCity.setEditable(false);
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City : ");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

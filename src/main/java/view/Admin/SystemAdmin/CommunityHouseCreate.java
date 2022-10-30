@@ -60,14 +60,18 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
         valCity = new javax.swing.JLabel();
         valCommunity = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         valAddress.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAddress.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City : ");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community :");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
         ddCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,11 +99,13 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
             }
         });
 
-        lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine2.setText("Address Line 2 :");
+        lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine2.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblAddressLine1.setText("Address Line 1 :");
+        lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine1.setForeground(new java.awt.Color(204, 204, 0));
 
         txtAddressLine1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {

@@ -72,6 +72,8 @@ public class HospitalCreate extends javax.swing.JPanel {
         valAddress = new javax.swing.JLabel();
         valZipCode = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         txtAbout.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAboutKeyReleased(evt);
@@ -85,12 +87,14 @@ public class HospitalCreate extends javax.swing.JPanel {
         valCity.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
         lblCity.setText("City : ");
 
         valCommunity.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valCommunity.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity.setText("Community :");
 
         ddCity.addActionListener(new java.awt.event.ActionListener() {
@@ -120,9 +124,11 @@ public class HospitalCreate extends javax.swing.JPanel {
         });
 
         lblAbout.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAbout.setForeground(new java.awt.Color(204, 204, 0));
         lblAbout.setText("About :");
 
         lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
         lblName.setText("Name :");
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -135,9 +141,11 @@ public class HospitalCreate extends javax.swing.JPanel {
         valAbout.setForeground(new java.awt.Color(255, 0, 0));
 
         lblZipCode.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblZipCode.setForeground(new java.awt.Color(204, 204, 0));
         lblZipCode.setText("Zip Code :");
 
         lblAddress.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddress.setForeground(new java.awt.Color(204, 204, 0));
         lblAddress.setText("Address :");
 
         txtAddress.addKeyListener(new java.awt.event.KeyAdapter() {

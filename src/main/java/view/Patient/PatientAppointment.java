@@ -103,8 +103,8 @@ public class PatientAppointment extends javax.swing.JPanel {
             tblDetails.getColumnModel().getColumn(5).setMaxWidth(0);
         }
 
-        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblDoctorRecord.setText("Community Doctors");
+        lblDoctorRecord.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
 
         txtGender.setEditable(false);
 
@@ -112,14 +112,14 @@ public class PatientAppointment extends javax.swing.JPanel {
 
         txtCommunity.setEditable(false);
 
-        lblCommunity4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity4.setText("Gender :");
+        lblCommunity4.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
 
-        lblCommunity3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity3.setText("Hospital :");
+        lblCommunity3.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
 
-        lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity1.setText("Community :");
+        lblCommunity1.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
 
         btn_create.setText("Create");
         btn_create.addActionListener(new java.awt.event.ActionListener() {
@@ -128,11 +128,11 @@ public class PatientAppointment extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("Doctor :");
+        lblCity.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("About :");
+        lblCommunity.setFont(new java.awt.Font("Stencil", 1, 24)); // NOI18N
 
         txtDoctor.setEditable(false);
 
@@ -155,8 +155,8 @@ public class PatientAppointment extends javax.swing.JPanel {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblDoctorRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
+                        .addComponent(lblDoctorRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -223,7 +223,7 @@ public class PatientAppointment extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCommunity4)
                     .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

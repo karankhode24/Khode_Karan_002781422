@@ -60,13 +60,17 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
         valCity = new javax.swing.JLabel();
         valCommunity = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         valAddress.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAddress.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
         lblCity.setText("City : ");
 
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity.setText("Community :");
 
         ddCity.addActionListener(new java.awt.event.ActionListener() {
@@ -96,9 +100,11 @@ public class CommunityHouseCreate extends javax.swing.JPanel {
         });
 
         lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine2.setForeground(new java.awt.Color(204, 204, 0));
         lblAddressLine2.setText("Address Line 2 :");
 
         lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine1.setForeground(new java.awt.Color(204, 204, 0));
         lblAddressLine1.setText("Address Line 1 :");
 
         txtAddressLine1.addKeyListener(new java.awt.event.KeyAdapter() {

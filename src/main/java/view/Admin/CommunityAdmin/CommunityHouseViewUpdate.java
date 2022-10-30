@@ -56,6 +56,8 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
         txtCity = new javax.swing.JTextField();
         lblCity = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,10 +65,14 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
             }
         });
 
+        lblCommunity.setBackground(new java.awt.Color(204, 204, 0));
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity.setText("Community :");
 
+        lblAddressLine1.setBackground(new java.awt.Color(204, 204, 0));
         lblAddressLine1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine1.setForeground(new java.awt.Color(204, 204, 0));
         lblAddressLine1.setText("Address Line 1 :");
 
         valAddress.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -127,10 +133,14 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
             tblDetails.getColumnModel().getColumn(5).setMaxWidth(0);
         }
 
+        lblHouseRecord.setBackground(new java.awt.Color(204, 204, 0));
         lblHouseRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblHouseRecord.setForeground(new java.awt.Color(204, 204, 0));
         lblHouseRecord.setText("House Record");
 
+        lblAddressLine2.setBackground(new java.awt.Color(204, 204, 0));
         lblAddressLine2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAddressLine2.setForeground(new java.awt.Color(204, 204, 0));
         lblAddressLine2.setText("Address Line 2 :");
 
         txtAddressLine2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -141,7 +151,9 @@ public class CommunityHouseViewUpdate extends javax.swing.JPanel {
 
         txtCity.setEditable(false);
 
+        lblCity.setBackground(new java.awt.Color(204, 204, 0));
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
         lblCity.setText("City : ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

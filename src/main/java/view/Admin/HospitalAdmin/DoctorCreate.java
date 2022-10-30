@@ -96,6 +96,8 @@ public class DoctorCreate extends javax.swing.JPanel {
         txtPassword = new javax.swing.JPasswordField();
         ddHospital = new javax.swing.JComboBox<>();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +119,7 @@ public class DoctorCreate extends javax.swing.JPanel {
         });
 
         lblAbout.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblAbout.setForeground(new java.awt.Color(204, 204, 0));
         lblAbout.setText("About:");
 
         valAbout.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -126,12 +129,14 @@ public class DoctorCreate extends javax.swing.JPanel {
         valCity.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
         lblCity.setText("City:");
 
         valCommunity.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valCommunity.setForeground(new java.awt.Color(255, 0, 0));
 
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
         lblCommunity.setText("Community:");
 
         ddCity.addActionListener(new java.awt.event.ActionListener() {
@@ -141,9 +146,11 @@ public class DoctorCreate extends javax.swing.JPanel {
         });
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
         jLabel1.setText("Personal Details");
 
         btnGender.add(btnOther);
+        btnOther.setForeground(new java.awt.Color(204, 204, 0));
         btnOther.setText("Other");
         btnOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,15 +165,18 @@ public class DoctorCreate extends javax.swing.JPanel {
         valAge.setForeground(new java.awt.Color(255, 0, 0));
 
         lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
         lblName.setText("Name:");
 
         valGender.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valGender.setForeground(new java.awt.Color(255, 0, 0));
 
         lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
         lblAge.setText("Age:");
 
         lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 0));
         lblGender.setText("Gender:");
 
         valPhone.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -176,9 +186,11 @@ public class DoctorCreate extends javax.swing.JPanel {
         valEmail.setForeground(new java.awt.Color(255, 0, 0));
 
         lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(204, 204, 0));
         lblPhoneNumber.setText("Phone Number:");
 
         lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(204, 204, 0));
         lblEmail.setText("Email:");
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -206,6 +218,7 @@ public class DoctorCreate extends javax.swing.JPanel {
         });
 
         btnGender.add(btnMale);
+        btnMale.setForeground(new java.awt.Color(204, 204, 0));
         btnMale.setText("Male");
         btnMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,6 +227,7 @@ public class DoctorCreate extends javax.swing.JPanel {
         });
 
         btnGender.add(btnFemale);
+        btnFemale.setForeground(new java.awt.Color(204, 204, 0));
         btnFemale.setText("Female");
         btnFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,9 +236,11 @@ public class DoctorCreate extends javax.swing.JPanel {
         });
 
         lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(204, 204, 0));
         lblUsername.setText("Username:");
 
         lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(204, 204, 0));
         lblPassword.setText("Password:");
 
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -246,6 +262,7 @@ public class DoctorCreate extends javax.swing.JPanel {
         valPassword.setForeground(new java.awt.Color(255, 0, 0));
 
         lblHospital.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblHospital.setForeground(new java.awt.Color(204, 204, 0));
         lblHospital.setText("Hospital :");
 
         valHospital.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N

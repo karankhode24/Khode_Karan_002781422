@@ -68,6 +68,8 @@ public class EncounterViewUpdate extends javax.swing.JPanel {
         datePicker = new com.github.lgooddatepicker.components.DatePicker();
         valDate = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,11 +120,13 @@ public class EncounterViewUpdate extends javax.swing.JPanel {
             tblDetails.getColumnModel().getColumn(6).setMaxWidth(0);
         }
 
-        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblDoctorRecord.setText("Encounter Records");
+        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblName.setText("Doctor :");
+        lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
 
         btn_create.setText("Create");
         btn_create.addActionListener(new java.awt.event.ActionListener() {
@@ -131,21 +135,25 @@ public class EncounterViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City :");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community :");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblAge.setText("Patient :");
+        lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
 
         txtCity.setEditable(false);
 
         txtCommunity.setEditable(false);
 
-        lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity1.setText("Hospital :");
+        lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(204, 204, 0));
 
         txtHospital.setEditable(false);
 
@@ -155,6 +163,7 @@ public class EncounterViewUpdate extends javax.swing.JPanel {
 
         lblDate.setText("Date :");
         lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblDate.setForeground(new java.awt.Color(204, 204, 0));
 
         datePicker.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -187,8 +196,8 @@ public class EncounterViewUpdate extends javax.swing.JPanel {
                             .addComponent(lblCommunity, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblCity, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(41, 41, 41)
-                        .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addComponent(lblDate)

@@ -21,7 +21,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author karan
+ * @author vaibhav
  */
 public class PatientDetails extends javax.swing.JPanel {
 
@@ -112,8 +112,13 @@ public class PatientDetails extends javax.swing.JPanel {
         lblCommunity1 = new javax.swing.JLabel();
         txtHospital = new javax.swing.JTextField();
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        setBackground(new java.awt.Color(0, 0, 0));
+
         jLabel1.setText("Personal Details");
+        jLabel1.setFont(new java.awt.Font("Stencil", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 51));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         valName.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valName.setForeground(new java.awt.Color(255, 0, 0));
@@ -131,6 +136,7 @@ public class PatientDetails extends javax.swing.JPanel {
         txtEncounterId.setEditable(false);
 
         btnGender.add(btnOther);
+        btnOther.setForeground(new java.awt.Color(204, 204, 0));
         btnOther.setText("Other");
         btnOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,22 +144,25 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblDoctorRecord.setText("Encounters");
+        lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
 
         valHouse.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valHouse.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblPassword.setText("Password:");
+        lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblName.setText("Name:");
+        lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
 
         txtTemperature.setEditable(false);
 
-        lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblAge.setText("Age:");
+        lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
 
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -161,13 +170,15 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblCommunity4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity4.setText("Temperature :");
+        lblCommunity4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
-        lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblEmail.setText("Email:");
+        lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(204, 204, 0));
 
         btnGender.add(btnMale);
+        btnMale.setForeground(new java.awt.Color(204, 204, 0));
         btnMale.setText("Male");
         btnMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,8 +192,8 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblCommunity5.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity5.setText("Breathing :");
+        lblCommunity5.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -190,17 +201,20 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblHospital.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblHospital.setText("Hospital :");
+        lblHospital.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblHospital.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblUsername.setText("Username:");
+        lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblHouse.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblHouse.setText("House :");
+        lblHouse.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblHouse.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity1.setText("Encounter ID :");
+        lblCity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
         valAge.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAge.setForeground(new java.awt.Color(255, 0, 0));
@@ -211,8 +225,9 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblPhoneNumber.setText("Phone Number:");
+        lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(204, 204, 0));
 
         txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -220,8 +235,9 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblGender.setText("Gender:");
+        lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 0));
 
         valEmail.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valEmail.setForeground(new java.awt.Color(255, 0, 0));
@@ -231,11 +247,12 @@ public class PatientDetails extends javax.swing.JPanel {
         valGender.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valGender.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblIssue.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblIssue.setText("Describe Issue:");
+        lblIssue.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblIssue.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblDate.setText("Date :");
+        lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
         ddHouse.setEditable(true);
         ddHouse.addActionListener(new java.awt.event.ActionListener() {
@@ -294,12 +311,13 @@ public class PatientDetails extends javax.swing.JPanel {
 
         txtCommunity.setEditable(false);
 
-        lblCommunity2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity2.setText("Doctor :");
+        lblCommunity2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
         txtDoctor.setEditable(false);
 
         btnGender.add(btnFemale);
+        btnFemale.setForeground(new java.awt.Color(204, 204, 0));
         btnFemale.setText("Female");
         btnFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -307,14 +325,16 @@ public class PatientDetails extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City:");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community:");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCommunity3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity3.setText("Pluse Rate :");
+        lblCommunity3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
         valUsername.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valUsername.setForeground(new java.awt.Color(255, 0, 0));
@@ -335,8 +355,8 @@ public class PatientDetails extends javax.swing.JPanel {
 
         txtPulseRate.setEditable(false);
 
-        lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity1.setText("Blood Pressure :");
+        lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
 
         txtHospital.setEditable(false);
 
@@ -405,7 +425,7 @@ public class PatientDetails extends javax.swing.JPanel {
                                             .addComponent(btnMale)
                                             .addGap(12, 12, 12)
                                             .addComponent(btnFemale)
-                                            .addGap(12, 12, 12)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(btnOther))
                                         .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -464,9 +484,9 @@ public class PatientDetails extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnMale)
-                        .addComponent(lblGender))
-                    .addComponent(btnFemale)
-                    .addComponent(btnOther)
+                        .addComponent(lblGender)
+                        .addComponent(btnFemale)
+                        .addComponent(btnOther))
                     .addComponent(valGender, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -564,23 +584,23 @@ public class PatientDetails extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(301, 301, 301)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(258, 258, 258))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel1)
-                .addGap(41, 41, 41)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

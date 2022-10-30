@@ -77,12 +77,15 @@ public class DoctorEncounters extends javax.swing.JFrame {
         valBreathing = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
         lblDate.setText("Date :");
         lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblDate.setForeground(new java.awt.Color(204, 204, 0));
 
         lblDoctorRecord.setText("Patients & Encounters");
         lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
 
         tblDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -140,9 +143,11 @@ public class DoctorEncounters extends javax.swing.JFrame {
 
         lblCommunity.setText("Patient :");
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCity.setText("Encounter ID :");
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
         valDate.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valDate.setForeground(new java.awt.Color(255, 0, 0));
@@ -169,15 +174,19 @@ public class DoctorEncounters extends javax.swing.JFrame {
 
         lblCommunity1.setText("Blood Pressure :");
         lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity3.setText("Pluse Rate :");
         lblCommunity3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity3.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity4.setText("Temperature :");
         lblCommunity4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity4.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity5.setText("Breathing :");
         lblCommunity5.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity5.setForeground(new java.awt.Color(204, 204, 0));
 
         txtBloodPressure.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {

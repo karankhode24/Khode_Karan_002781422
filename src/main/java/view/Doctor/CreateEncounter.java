@@ -59,9 +59,13 @@ public class CreateEncounter extends javax.swing.JFrame {
         btnSave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 51));
+        setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setText("Encounter Details");
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
 
         valPatient.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valPatient.setForeground(new java.awt.Color(255, 0, 0));
@@ -72,8 +76,10 @@ public class CreateEncounter extends javax.swing.JFrame {
             }
         });
 
-        lblPatient.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblPatient.setText("Patient :");
+        lblPatient.setBackground(new java.awt.Color(0, 0, 0));
+        lblPatient.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblPatient.setForeground(new java.awt.Color(204, 204, 0));
 
         valDate.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valDate.setForeground(new java.awt.Color(255, 0, 0));
@@ -84,8 +90,10 @@ public class CreateEncounter extends javax.swing.JFrame {
             }
         });
 
-        lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblDate.setText("Date :");
+        lblDate.setBackground(new java.awt.Color(0, 0, 0));
+        lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblDate.setForeground(new java.awt.Color(204, 204, 0));
 
         btnBack.setText("<- Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +126,7 @@ public class CreateEncounter extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(datePicker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ddPatient, 0, 231, Short.MAX_VALUE)
+                            .addComponent(ddPatient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnBack)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

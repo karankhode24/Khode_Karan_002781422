@@ -5,6 +5,11 @@
     <Component class="javax.swing.ButtonGroup" name="btnGender">
     </Component>
   </NonVisualComponents>
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="0" green="0" red="0" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -217,10 +222,13 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
+        <Property name="text" type="java.lang.String" value="City:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="City:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="btnFemale">
@@ -236,18 +244,24 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblUsername">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Username:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Username:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPassword">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Password:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Password:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtUsername">
@@ -287,10 +301,13 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblCommunity">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Community:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Community:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ddCity">
@@ -308,10 +325,16 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Personal Details"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Helvetica Neue" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Personal Details"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="btnOther">
@@ -347,10 +370,13 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Name:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Name:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="valGender">
@@ -365,18 +391,24 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblAge">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Age:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Age:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblGender">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Gender:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gender:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="valPhone">
@@ -401,18 +433,24 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblPhoneNumber">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Phone Number:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Phone Number:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblEmail">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Email:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Email:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtName">
@@ -480,10 +518,13 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblCommunity1">
       <Properties>
+        <Property name="text" type="java.lang.String" value="Admin Type:"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hiragino Mincho ProN" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Admin Type:"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="valAdmin">

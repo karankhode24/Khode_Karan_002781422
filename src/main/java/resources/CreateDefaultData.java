@@ -34,15 +34,15 @@ public class CreateDefaultData {
         // create community
         Community sb = MainJFrame.communityDirectory.newCommunity("South Boston", boston);
         Community jp = MainJFrame.communityDirectory.newCommunity("Jamaica Plain", boston);
-        Community rn = MainJFrame.communityDirectory.newCommunity("Ranipura", worcester);
-        Community vn = MainJFrame.communityDirectory.newCommunity("Vijay Nagar", worcester);
-        Community gb = MainJFrame.communityDirectory.newCommunity("Geeta Bhawan", springField);
+        Community rn = MainJFrame.communityDirectory.newCommunity("bringham", worcester);
+        Community vn = MainJFrame.communityDirectory.newCommunity("nyc", worcester);
+        Community gb = MainJFrame.communityDirectory.newCommunity("Boston123", springField);
         Community ai = MainJFrame.communityDirectory.newCommunity("Airport", lowell);
         Community mr = MainJFrame.communityDirectory.newCommunity("MR10", lowell);
-        Community cn = MainJFrame.communityDirectory.newCommunity("Chandan nagar", lowell);
-        Community rw = MainJFrame.communityDirectory.newCommunity("Rajwada", cambridge);
-        Community sn = MainJFrame.communityDirectory.newCommunity("Sudama nagar", cambridge);
-        Community r = MainJFrame.communityDirectory.newCommunity("Rau", brockton);
+        Community cn = MainJFrame.communityDirectory.newCommunity("indore", lowell);
+        Community rw = MainJFrame.communityDirectory.newCommunity("new hempshire", cambridge);
+        Community sn = MainJFrame.communityDirectory.newCommunity("city123", cambridge);
+        Community r = MainJFrame.communityDirectory.newCommunity("india", brockton);
         
         // create hospital
         Hospital a = MainJFrame.hospitalDirectory.newHospital("apple", "At bhawarkua", 452005, "637 sd", boston, sb);
@@ -86,9 +86,9 @@ public class CreateDefaultData {
         Patient pa5 = MainJFrame.patientDirectory.newPatient("Heark attack", h2, e, "sayoni", 24, "sayoni@gmail.com", "Female", "2547878787", lowell, mr, "sayoni", "vbhv10");
         
         // Create Admins
-        Admins ad1 = MainJFrame.adminDirectory.newAdmin("karan", 24, "karan@gmail.com", "Male", "7878787878", boston, jp, "vbhv", "vbhv10", Admins.AdminType.SYSTEM);
-        Admins ad2 = MainJFrame.adminDirectory.newAdmin("megha", 25, "megha@gmail.com", "Female", "7878743878", springField, gb, "megha", "vbhv10", Admins.AdminType.COMMUNITY);
-        Admins ad3 = MainJFrame.adminDirectory.newAdmin("nalin", 26, "nalin@gmail.com", "Male", "9878787878", worcester, vn, "nalin", "vbhv10", Admins.AdminType.HOSPITAL);
+        Admins ad1 = MainJFrame.adminDirectory.newAdmin("karan", 24, "karan@gmail.com", "Male", "7878787878", boston, jp, "kk123", "kk123", Admins.AdminType.SYSTEM);
+        Admins ad2 = MainJFrame.adminDirectory.newAdmin("megha", 25, "karan1@gmail.com", "male", "7878743878", springField, gb, "kk123", "kk123", Admins.AdminType.COMMUNITY);
+        Admins ad3 = MainJFrame.adminDirectory.newAdmin("nalin", 26, "karan2@gmail.com", "male", "9878787878", worcester, vn, "kk123", "kk123", Admins.AdminType.HOSPITAL);
         
         Encounter e1 = MainJFrame.encounterDirectory.newEncounter(new Date(1998, 10, 10), d1, a, pa1);
     }

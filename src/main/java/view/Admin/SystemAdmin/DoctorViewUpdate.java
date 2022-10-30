@@ -83,6 +83,8 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
         txtAbout = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,6 +149,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblDoctorRecord.setText("Doctor Records");
         lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(204, 204, 0));
 
         btn_create.setText("Create");
         btn_create.addActionListener(new java.awt.event.ActionListener() {
@@ -157,9 +160,11 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblCity.setText("City :");
         lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
         lblCommunity.setText("Community :");
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
         txtCity.setEditable(false);
 
@@ -167,14 +172,17 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblCommunity1.setText("Hospital :");
         lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(204, 204, 0));
 
         txtHospital.setEditable(false);
 
         lblPhoneNumber.setText("Number :");
         lblPhoneNumber.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(204, 204, 0));
 
         lblEmail.setText("Email :");
         lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(204, 204, 0));
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -218,9 +226,11 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblUsername.setText("Username :");
         lblUsername.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(204, 204, 0));
 
         lblPassword.setText("Password :");
         lblPassword.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(204, 204, 0));
 
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -244,6 +254,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblName.setText("Name :");
         lblName.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 0));
 
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -256,9 +267,11 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblAge.setText("Age :");
         lblAge.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblAge.setForeground(new java.awt.Color(204, 204, 0));
 
         lblGender.setText("Gender :");
         lblGender.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 0));
 
         valPhone.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valPhone.setForeground(new java.awt.Color(255, 0, 0));
@@ -268,6 +281,7 @@ public class DoctorViewUpdate extends javax.swing.JPanel {
 
         lblPassword1.setText("About :");
         lblPassword1.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
+        lblPassword1.setForeground(new java.awt.Color(204, 204, 0));
 
         valUsername.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valUsername.setForeground(new java.awt.Color(255, 0, 0));

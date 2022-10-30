@@ -79,14 +79,18 @@ public class EncounterCreate extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         valCommunity.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valCommunity.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblHospital.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblHospital.setText("Hospital :");
+        lblHospital.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblHospital.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community:");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
         valHospital.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valHospital.setForeground(new java.awt.Color(255, 0, 0));
@@ -112,14 +116,17 @@ public class EncounterCreate extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City:");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setText("Encounter Details");
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblPatient.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblPatient.setText("Patient :");
+        lblPatient.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblPatient.setForeground(new java.awt.Color(204, 204, 0));
 
         ddDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,8 +134,9 @@ public class EncounterCreate extends javax.swing.JPanel {
             }
         });
 
-        lblDoctor.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblDoctor.setText("Doctor :");
+        lblDoctor.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblDoctor.setForeground(new java.awt.Color(204, 204, 0));
 
         ddPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,8 +150,9 @@ public class EncounterCreate extends javax.swing.JPanel {
         valPatient.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valPatient.setForeground(new java.awt.Color(255, 0, 0));
 
-        lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblDate.setText("Date :");
+        lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblDate.setForeground(new java.awt.Color(204, 204, 0));
 
         datePicker.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {

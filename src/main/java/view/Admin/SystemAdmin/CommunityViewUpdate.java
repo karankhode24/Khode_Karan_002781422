@@ -54,6 +54,8 @@ public class CommunityViewUpdate extends javax.swing.JPanel {
         txtSearch = new javax.swing.JTextField();
         valCommunity = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         tblDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -85,8 +87,9 @@ public class CommunityViewUpdate extends javax.swing.JPanel {
             tblDetails.getColumnModel().getColumn(2).setMaxWidth(0);
         }
 
-        lblCommunityRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblCommunityRecord.setText("Community record");
+        lblCommunityRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblCommunityRecord.setForeground(new java.awt.Color(204, 204, 0));
 
         btn_create.setText("Create");
         btn_create.addActionListener(new java.awt.event.ActionListener() {
@@ -95,11 +98,13 @@ public class CommunityViewUpdate extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCity.setText("City : ");
+        lblCity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity.setForeground(new java.awt.Color(204, 204, 0));
 
-        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("Community :");
+        lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(204, 204, 0));
 
         txtCity.setEditable(false);
 
