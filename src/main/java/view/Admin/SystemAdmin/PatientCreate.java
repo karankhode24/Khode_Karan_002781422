@@ -127,12 +127,14 @@ public class PatientCreate extends javax.swing.JPanel {
         lblPassword.setForeground(new java.awt.Color(204, 204, 0));
         lblPassword.setText("Password:");
 
+        txtUsername.setForeground(new java.awt.Color(255, 51, 51));
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtUsernameKeyReleased(evt);
             }
         });
 
+        txtIssue.setForeground(new java.awt.Color(255, 51, 51));
         txtIssue.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtIssueKeyReleased(evt);
@@ -159,12 +161,14 @@ public class PatientCreate extends javax.swing.JPanel {
         valHospital.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valHospital.setForeground(new java.awt.Color(255, 0, 0));
 
+        ddCity.setForeground(new java.awt.Color(255, 51, 51));
         ddCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ddCityActionPerformed(evt);
             }
         });
 
+        txtPassword.setForeground(new java.awt.Color(255, 51, 51));
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPasswordKeyReleased(evt);
@@ -201,6 +205,7 @@ public class PatientCreate extends javax.swing.JPanel {
         lblAge.setForeground(new java.awt.Color(204, 204, 0));
         lblAge.setText("Age:");
 
+        ddHospital.setForeground(new java.awt.Color(255, 51, 51));
         ddHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ddHospitalActionPerformed(evt);
@@ -225,24 +230,28 @@ public class PatientCreate extends javax.swing.JPanel {
         lblEmail.setForeground(new java.awt.Color(204, 204, 0));
         lblEmail.setText("Email:");
 
+        txtName.setForeground(new java.awt.Color(255, 51, 51));
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNameKeyReleased(evt);
             }
         });
 
+        txtAge.setForeground(new java.awt.Color(255, 51, 51));
         txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAgeKeyReleased(evt);
             }
         });
 
+        txtPhoneNumber.setForeground(new java.awt.Color(255, 51, 51));
         txtPhoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPhoneNumberKeyReleased(evt);
             }
         });
 
+        txtEmail.setForeground(new java.awt.Color(255, 51, 51));
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtEmailKeyReleased(evt);
@@ -290,6 +299,7 @@ public class PatientCreate extends javax.swing.JPanel {
         lblHouse.setText("House :");
 
         ddHouse.setEditable(true);
+        ddHouse.setForeground(new java.awt.Color(255, 51, 51));
         ddHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ddHouseActionPerformed(evt);

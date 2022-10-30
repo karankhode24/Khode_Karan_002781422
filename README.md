@@ -1,17 +1,20 @@
-# Employee Management application
+# hospital management
 
-This application can be used for storing, retrieving an updating the details of employees of the organization.
+This application can be used for managing, maintaining an updating the details of patients of the hospital.
 
 This application just runs crud operations over the records saved in memory.
 
 ## Functionalities
 
-1. Create the data for employees. It has dynamic validations for every field.
+1. Create the data for person/ patients.
 
-2. View the data of the employee by clicking the name field of the table.
+2. View the data of the patients by clicking the name field of the table.
 
 3. Update the details with similar validations as create functionality has.
 
-4. Delete the record of the employee.
+4. Delete the record of the person/patient.
 
-5. Search the employee record. It has dynamic search functionality.
+5. it also helps to manipulate the data of the person
+
+
+.......................................xxxxxxxxxxxxxxxxxxxxxxxxxx....................................

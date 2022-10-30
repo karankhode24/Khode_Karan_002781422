@@ -28,6 +28,7 @@ public class CreateEncounter extends javax.swing.JFrame {
     Validations validations;
     public CreateEncounter() {
         initComponents();
+        
         doctor = (Doctor) MainJFrame.loginSession.getObject();
         validations = new Validations();
         setLocationRelativeTo(null);
@@ -59,12 +60,12 @@ public class CreateEncounter extends javax.swing.JFrame {
         btnSave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setText("Encounter Details");
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 0));
 
         valPatient.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -157,7 +158,7 @@ public class CreateEncounter extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(btnSave))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(224, Short.MAX_VALUE))
         );
 
         pack();

@@ -62,7 +62,6 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_title = new javax.swing.JLabel();
         btn_admins = new javax.swing.JButton();
         btn_doctors = new javax.swing.JButton();
         btn_person = new javax.swing.JButton();
@@ -70,11 +69,6 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 255, 204));
-
-        lbl_title.setBackground(new java.awt.Color(255, 51, 51));
-        lbl_title.setFont(new java.awt.Font("Hiragino Maru Gothic ProN", 1, 36)); // NOI18N
-        lbl_title.setForeground(new java.awt.Color(153, 153, 0));
-        lbl_title.setText("Healthup");
 
         btn_admins.setText("Admins");
         btn_admins.addActionListener(new java.awt.event.ActionListener() {
@@ -107,34 +101,28 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_title, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jLabel1))))
+                        .addGap(183, 183, 183)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(btn_admins)
-                        .addGap(45, 45, 45)
-                        .addComponent(btn_doctors)
-                        .addGap(40, 40, 40)
-                        .addComponent(btn_person)))
-                .addContainerGap(167, Short.MAX_VALUE))
+                        .addGap(105, 105, 105)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btn_doctors, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                            .addComponent(btn_admins, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_person, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(lbl_title, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(35, 35, 35)
                 .addComponent(jLabel1)
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_admins)
-                    .addComponent(btn_doctors)
-                    .addComponent(btn_person))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addGap(85, 85, 85)
+                .addComponent(btn_admins)
+                .addGap(29, 29, 29)
+                .addComponent(btn_doctors)
+                .addGap(30, 30, 30)
+                .addComponent(btn_person)
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         pack();
@@ -223,7 +211,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btn_doctors;
     private javax.swing.JButton btn_person;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lbl_title;
     // End of variables declaration//GEN-END:variables
 
 

@@ -21,7 +21,7 @@ import view.MainJFrame;
 
 /**
  *
- * @author vaibhav
+ * @author karan
  */
 public class PatientDetails extends javax.swing.JPanel {
 
@@ -136,8 +136,8 @@ public class PatientDetails extends javax.swing.JPanel {
         txtEncounterId.setEditable(false);
 
         btnGender.add(btnOther);
-        btnOther.setForeground(new java.awt.Color(204, 204, 0));
         btnOther.setText("Other");
+        btnOther.setForeground(new java.awt.Color(204, 204, 0));
         btnOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOtherActionPerformed(evt);
@@ -146,6 +146,7 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblDoctorRecord.setText("Encounters");
         lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
+        lblDoctorRecord.setForeground(new java.awt.Color(51, 255, 255));
 
         valHouse.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valHouse.setForeground(new java.awt.Color(255, 0, 0));
@@ -172,14 +173,15 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblCommunity4.setText("Temperature :");
         lblCommunity4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity4.setForeground(new java.awt.Color(102, 255, 255));
 
         lblEmail.setText("Email:");
         lblEmail.setFont(new java.awt.Font("Hiragino Mincho ProN", 0, 18)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(204, 204, 0));
 
         btnGender.add(btnMale);
-        btnMale.setForeground(new java.awt.Color(204, 204, 0));
         btnMale.setText("Male");
+        btnMale.setForeground(new java.awt.Color(204, 204, 0));
         btnMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMaleActionPerformed(evt);
@@ -194,6 +196,7 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblCommunity5.setText("Breathing :");
         lblCommunity5.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity5.setForeground(new java.awt.Color(102, 255, 255));
 
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -215,6 +218,7 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblCity1.setText("Encounter ID :");
         lblCity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCity1.setForeground(new java.awt.Color(102, 255, 255));
 
         valAge.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valAge.setForeground(new java.awt.Color(255, 0, 0));
@@ -253,6 +257,7 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblDate.setText("Date :");
         lblDate.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblDate.setForeground(new java.awt.Color(102, 255, 255));
 
         ddHouse.setEditable(true);
         ddHouse.addActionListener(new java.awt.event.ActionListener() {
@@ -313,12 +318,13 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblCommunity2.setText("Doctor :");
         lblCommunity2.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity2.setForeground(new java.awt.Color(102, 255, 255));
 
         txtDoctor.setEditable(false);
 
         btnGender.add(btnFemale);
-        btnFemale.setForeground(new java.awt.Color(204, 204, 0));
         btnFemale.setText("Female");
+        btnFemale.setForeground(new java.awt.Color(204, 204, 0));
         btnFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFemaleActionPerformed(evt);
@@ -335,6 +341,7 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblCommunity3.setText("Pluse Rate :");
         lblCommunity3.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity3.setForeground(new java.awt.Color(102, 255, 255));
 
         valUsername.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
         valUsername.setForeground(new java.awt.Color(255, 0, 0));
@@ -357,6 +364,7 @@ public class PatientDetails extends javax.swing.JPanel {
 
         lblCommunity1.setText("Blood Pressure :");
         lblCommunity1.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
+        lblCommunity1.setForeground(new java.awt.Color(102, 255, 255));
 
         txtHospital.setEditable(false);
 
@@ -585,22 +593,22 @@ public class PatientDetails extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(266, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(258, 258, 258))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

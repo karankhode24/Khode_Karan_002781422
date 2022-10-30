@@ -49,24 +49,24 @@ public class PatientView extends javax.swing.JFrame {
 
         controlPanel.setBackground(new java.awt.Color(0, 0, 0));
 
-        btn_back_admin1.setForeground(new java.awt.Color(51, 51, 255));
         btn_back_admin1.setText("<- Logout");
+        btn_back_admin1.setForeground(new java.awt.Color(51, 51, 255));
         btn_back_admin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_back_admin1ActionPerformed(evt);
             }
         });
 
-        btnDetails.setForeground(new java.awt.Color(51, 51, 255));
         btnDetails.setText("Details");
+        btnDetails.setForeground(new java.awt.Color(51, 51, 255));
         btnDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDetailsActionPerformed(evt);
             }
         });
 
-        btnAppointment.setForeground(new java.awt.Color(51, 51, 255));
         btnAppointment.setText("Appointment");
+        btnAppointment.setForeground(new java.awt.Color(51, 51, 255));
         btnAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAppointmentActionPerformed(evt);

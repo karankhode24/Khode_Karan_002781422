@@ -32,6 +32,7 @@ public class PatientRegister extends javax.swing.JFrame {
     public PatientRegister() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(new java.awt.Color(0, 0, 0));
         
         AutoCompleteDecorator.decorate(ddCity);
         AutoCompleteDecorator.decorate(ddCommunity);

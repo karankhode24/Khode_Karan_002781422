@@ -19,6 +19,7 @@ public class HospitalAdminJFrame extends javax.swing.JFrame {
     public HospitalAdminJFrame() {
         initComponents();
         workArea.setSize(900, 900);
+        getContentPane().setBackground(new java.awt.Color(0, 0, 0));
         setLocationRelativeTo(null);
         HospitalViewUpdate hospitalView = new HospitalViewUpdate();
         splitPane.setRightComponent(hospitalView);

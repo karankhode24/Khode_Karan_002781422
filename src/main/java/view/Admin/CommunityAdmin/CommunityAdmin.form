@@ -83,10 +83,10 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btn_community">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Community"/>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="Community"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_communityActionPerformed"/>
@@ -94,10 +94,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_houses">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Houses"/>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="Address"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_housesActionPerformed"/>
@@ -105,10 +105,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btn_back_admin">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&lt;- Logout"/>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="33" red="33" type="rgb"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="&lt;- Logout"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_back_adminActionPerformed"/>
