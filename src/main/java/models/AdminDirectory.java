@@ -52,4 +52,7 @@ public class AdminDirectory {
         }
         return null;
     }
+    public void deleteAdmin(Admins admin) {
+        adminlist.remove(admin);
+    }
 }

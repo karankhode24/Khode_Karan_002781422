@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import models.Doctor;
 import models.Encounter;
 import models.VitalSigns;
 import resources.Validations;
@@ -540,8 +541,9 @@ public class DoctorEncounters extends javax.swing.JFrame {
         
         DefaultTableModel model = (DefaultTableModel) tblDetails.getModel();
         model.setRowCount(0);
+        Doctor doctor = (Doctor) MainJFrame.loginSession.getObject();
         
-        for (Encounter c : MainJFrame.encounterDirectory.getEncouterList()){
+        for (Encounter c : doctor.getEncounterList()){
             Object[] row = new Object[6];
             row[0] = c.getEncounterID();
             row[1] = c.getDate();

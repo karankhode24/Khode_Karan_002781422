@@ -4,6 +4,7 @@
  */
 package view.Patient;
 
+import models.Doctor;
 import view.Admin.HospitalAdmin.*;
 import view.Admin.AdminJFrame;
 import view.MainJFrame;
@@ -38,8 +39,8 @@ public class PatientView extends javax.swing.JFrame {
         splitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
         btn_back_admin1 = new javax.swing.JButton();
-        btn_hospitals1 = new javax.swing.JButton();
-        btn_patients1 = new javax.swing.JButton();
+        btnDetails = new javax.swing.JButton();
+        btnAppointment = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,30 +49,30 @@ public class PatientView extends javax.swing.JFrame {
 
         controlPanel.setBackground(new java.awt.Color(153, 255, 204));
 
+        btn_back_admin1.setText("<- Logout");
         btn_back_admin1.setBackground(new java.awt.Color(255, 255, 255));
         btn_back_admin1.setForeground(new java.awt.Color(51, 51, 255));
-        btn_back_admin1.setText("<- Logout");
         btn_back_admin1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_back_admin1ActionPerformed(evt);
             }
         });
 
-        btn_hospitals1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_hospitals1.setForeground(new java.awt.Color(51, 51, 255));
-        btn_hospitals1.setText("Details");
-        btn_hospitals1.addActionListener(new java.awt.event.ActionListener() {
+        btnDetails.setText("Details");
+        btnDetails.setBackground(new java.awt.Color(255, 255, 255));
+        btnDetails.setForeground(new java.awt.Color(51, 51, 255));
+        btnDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_hospitals1ActionPerformed(evt);
+                btnDetailsActionPerformed(evt);
             }
         });
 
-        btn_patients1.setBackground(new java.awt.Color(255, 255, 255));
-        btn_patients1.setForeground(new java.awt.Color(51, 51, 255));
-        btn_patients1.setText("Appointment");
-        btn_patients1.addActionListener(new java.awt.event.ActionListener() {
+        btnAppointment.setText("Appointment");
+        btnAppointment.setBackground(new java.awt.Color(255, 255, 255));
+        btnAppointment.setForeground(new java.awt.Color(51, 51, 255));
+        btnAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_patients1ActionPerformed(evt);
+                btnAppointmentActionPerformed(evt);
             }
         });
 
@@ -83,11 +84,11 @@ public class PatientView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_back_admin1)
-                    .addComponent(btn_hospitals1))
+                    .addComponent(btnDetails))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_patients1)
+                .addComponent(btnAppointment)
                 .addContainerGap())
         );
         controlPanelLayout.setVerticalGroup(
@@ -96,9 +97,9 @@ public class PatientView extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(btn_back_admin1)
                 .addGap(124, 124, 124)
-                .addComponent(btn_hospitals1)
+                .addComponent(btnDetails)
                 .addGap(18, 18, 18)
-                .addComponent(btn_patients1)
+                .addComponent(btnAppointment)
                 .addContainerGap(759, Short.MAX_VALUE))
         );
 
@@ -140,15 +141,15 @@ public class PatientView extends javax.swing.JFrame {
         new MainJFrame().setVisible(true);
     }//GEN-LAST:event_btn_back_admin1ActionPerformed
 
-    private void btn_hospitals1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hospitals1ActionPerformed
-        HospitalViewUpdate h = new HospitalViewUpdate();
+    private void btnDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailsActionPerformed
+        PatientDetails h = new PatientDetails();
         splitPane.setRightComponent(h);
-    }//GEN-LAST:event_btn_hospitals1ActionPerformed
+    }//GEN-LAST:event_btnDetailsActionPerformed
 
-    private void btn_patients1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_patients1ActionPerformed
-        PatientViewUpdate d = new PatientViewUpdate();
+    private void btnAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentActionPerformed
+        PatientAppointment d = new PatientAppointment();
         splitPane.setRightComponent(d);
-    }//GEN-LAST:event_btn_patients1ActionPerformed
+    }//GEN-LAST:event_btnAppointmentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,52 +183,16 @@ public class PatientView extends javax.swing.JFrame {
         });
     }
     
-    
-    public void setHospitalCreateView() {                                               
+    public void setAppointmentView() {                                               
         // TODO add your handling code here:
-        HospitalCreate createPanel = new HospitalCreate();
-        splitPane.setRightComponent(createPanel);
-    }
-    
-    public void setDoctorCreateView() {                                               
-        // TODO add your handling code here:
-        DoctorCreate createPanel = new DoctorCreate();
-        splitPane.setRightComponent(createPanel);
-    }
-    
-    public void setEncounterCreateView() {                                               
-        // TODO add your handling code here:
-        EncounterCreate createPanel = new EncounterCreate();
-        splitPane.setRightComponent(createPanel);
-    }
-    
-    public void setPatientCreateView() {                                               
-        // TODO add your handling code here:
-        PatientCreate createPanel = new PatientCreate();
-        splitPane.setRightComponent(createPanel);
-    }
-    
-    public void setEncounterUpdateView() {                                               
-        // TODO add your handling code here:
-        EncounterViewUpdate createPanel = new EncounterViewUpdate();
-        splitPane.setRightComponent(createPanel);
-    }
-    
-    public void setDoctorUpdateView() {                                               
-        
-        DoctorViewUpdate createPanel = new DoctorViewUpdate();
-        splitPane.setRightComponent(createPanel);
-    }
-    public void setPatientUpdateView() {                                               
-        
-        PatientViewUpdate createPanel = new PatientViewUpdate();
+        PatientAppointment createPanel = new PatientAppointment();
         splitPane.setRightComponent(createPanel);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAppointment;
+    private javax.swing.JButton btnDetails;
     private javax.swing.JButton btn_back_admin1;
-    private javax.swing.JButton btn_hospitals1;
-    private javax.swing.JButton btn_patients1;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel workArea;

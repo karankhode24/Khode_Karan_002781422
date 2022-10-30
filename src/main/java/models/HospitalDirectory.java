@@ -67,4 +67,17 @@ public class HospitalDirectory {
         }}
         return searchHospitalDirectory;
     }
+    
+    public ArrayList<Doctor> getDoctorsInCommunity(Community community)
+    {
+        ArrayList<Doctor> searchDoctorDirectory = new ArrayList();
+        for(Hospital hospital: hospitalList)
+        {
+            if(hospital.getCommunity().equals(community))
+            {
+                searchDoctorDirectory.addAll(hospital.getDoctorList());
+            
+        }}
+        return searchDoctorDirectory;
+    }
 }

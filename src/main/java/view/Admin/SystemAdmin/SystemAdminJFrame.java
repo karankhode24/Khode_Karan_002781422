@@ -43,6 +43,7 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
         btn_back_admin = new javax.swing.JButton();
         btn_community = new javax.swing.JButton();
         btn_houses = new javax.swing.JButton();
+        btn_houses1 = new javax.swing.JButton();
         workArea = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -114,6 +115,15 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
             }
         });
 
+        btn_houses1.setBackground(new java.awt.Color(255, 255, 255));
+        btn_houses1.setForeground(new java.awt.Color(51, 51, 255));
+        btn_houses1.setText("Create Admin");
+        btn_houses1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_houses1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
@@ -127,8 +137,9 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
                     .addComponent(btn_patients)
                     .addComponent(btn_encounters)
                     .addComponent(btn_community)
-                    .addComponent(btn_houses))
-                .addContainerGap(8, Short.MAX_VALUE))
+                    .addComponent(btn_houses)
+                    .addComponent(btn_houses1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,7 +158,9 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
                 .addComponent(btn_community)
                 .addGap(18, 18, 18)
                 .addComponent(btn_houses)
-                .addContainerGap(601, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btn_houses1)
+                .addContainerGap(560, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -217,6 +230,11 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
         CommunityHouseViewUpdate viewHousePanel = new CommunityHouseViewUpdate();
         splitPane.setRightComponent(viewHousePanel);
     }//GEN-LAST:event_btn_housesActionPerformed
+
+    private void btn_houses1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_houses1ActionPerformed
+        AdminViewUpdate viewAdminPanel = new AdminViewUpdate();
+        splitPane.setRightComponent(viewAdminPanel);
+    }//GEN-LAST:event_btn_houses1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,6 +332,16 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
         CommunityViewUpdate communityView = new CommunityViewUpdate();
         splitPane.setRightComponent(communityView);
     }
+    
+    public void setAdminView() {
+        AdminViewUpdate communityView = new AdminViewUpdate();
+        splitPane.setRightComponent(communityView);
+    }
+    
+    public void setAdminCreate() {
+        AdminCreate communityView = new AdminCreate();
+        splitPane.setRightComponent(communityView);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back_admin;
@@ -322,6 +350,7 @@ public class SystemAdminJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btn_encounters;
     private javax.swing.JButton btn_hospitals;
     private javax.swing.JButton btn_houses;
+    private javax.swing.JButton btn_houses1;
     private javax.swing.JButton btn_patients;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JSplitPane splitPane;

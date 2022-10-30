@@ -4,6 +4,19 @@
  */
 package view.Patient;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Vector;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
+import models.Doctor;
+import models.Patient;
+import resources.Validations;
+import view.MainJFrame;
+
 /**
  *
  * @author karan
@@ -13,9 +26,20 @@ public class PatientAppointment extends javax.swing.JPanel {
     /**
      * Creates new form PatientAppointment
      */
+    
+    Vector originalTableModel;
+    Validations validations;
+    Patient patient;
+    
     public PatientAppointment() {
         initComponents();
+        MainJFrame.defaultSearchText(txtSearch, "Search ...");
+        populateTable();
+        patient = (Patient) MainJFrame.loginSession.getObject();
+        validations = new Validations();
+        originalTableModel = (Vector) ((DefaultTableModel) tblDetails.getModel()).getDataVector().clone();
         btn_create.setVisible(false);
+        datePicker.setVisible(false);
     }
 
     /**
@@ -30,32 +54,34 @@ public class PatientAppointment extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDetails = new javax.swing.JTable();
         lblDoctorRecord = new javax.swing.JLabel();
-        txtTemperature = new javax.swing.JTextField();
-        txtPulseRate = new javax.swing.JTextField();
-        txtBloodPressure = new javax.swing.JTextField();
+        txtGender = new javax.swing.JTextField();
+        txtHospital = new javax.swing.JTextField();
+        txtCommunity = new javax.swing.JTextField();
         lblCommunity4 = new javax.swing.JLabel();
         lblCommunity3 = new javax.swing.JLabel();
         lblCommunity1 = new javax.swing.JLabel();
         btn_create = new javax.swing.JButton();
         lblCity = new javax.swing.JLabel();
         lblCommunity = new javax.swing.JLabel();
-        txtEncounterId = new javax.swing.JTextField();
-        txtPatient = new javax.swing.JTextField();
+        txtDoctor = new javax.swing.JTextField();
+        txtAbout = new javax.swing.JTextField();
         txtSearch = new javax.swing.JTextField();
+        datePicker = new com.github.lgooddatepicker.components.DatePicker();
+        valDate = new javax.swing.JLabel();
 
         tblDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "About", "Community", "Hospital", "object"
+                "Name", "About", "Community", "Hospital", "Gender", "object"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -72,31 +98,19 @@ public class PatientAppointment extends javax.swing.JPanel {
             tblDetails.getColumnModel().getColumn(4).setMinWidth(0);
             tblDetails.getColumnModel().getColumn(4).setPreferredWidth(0);
             tblDetails.getColumnModel().getColumn(4).setMaxWidth(0);
+            tblDetails.getColumnModel().getColumn(5).setMinWidth(0);
+            tblDetails.getColumnModel().getColumn(5).setPreferredWidth(0);
+            tblDetails.getColumnModel().getColumn(5).setMaxWidth(0);
         }
 
         lblDoctorRecord.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 24)); // NOI18N
         lblDoctorRecord.setText("Community Doctors");
 
-        txtTemperature.setEditable(false);
-        txtTemperature.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtTemperatureKeyReleased(evt);
-            }
-        });
+        txtGender.setEditable(false);
 
-        txtPulseRate.setEditable(false);
-        txtPulseRate.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPulseRateKeyReleased(evt);
-            }
-        });
+        txtHospital.setEditable(false);
 
-        txtBloodPressure.setEditable(false);
-        txtBloodPressure.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtBloodPressureKeyReleased(evt);
-            }
-        });
+        txtCommunity.setEditable(false);
 
         lblCommunity4.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity4.setText("Gender :");
@@ -120,15 +134,18 @@ public class PatientAppointment extends javax.swing.JPanel {
         lblCommunity.setFont(new java.awt.Font("Hiragino Mincho ProN", 1, 18)); // NOI18N
         lblCommunity.setText("About :");
 
-        txtEncounterId.setEditable(false);
+        txtDoctor.setEditable(false);
 
-        txtPatient.setEditable(false);
+        txtAbout.setEditable(false);
 
         txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtSearchKeyReleased(evt);
             }
         });
+
+        valDate.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
+        valDate.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -142,39 +159,36 @@ public class PatientAppointment extends javax.swing.JPanel {
                         .addGap(38, 38, 38)
                         .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txtPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(133, 133, 133))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txtEncounterId, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtBloodPressure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(lblCommunity4)
-                                            .addComponent(lblCommunity3)
-                                            .addComponent(lblCommunity1))
-                                        .addGap(26, 26, 26)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtTemperature, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtPulseRate, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(133, 133, 133)))
-                        .addComponent(btn_create, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblCommunity)
+                            .addComponent(lblCommunity4)
+                            .addComponent(lblCommunity3)
+                            .addComponent(lblCommunity1)
+                            .addComponent(lblCity))
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblCity)
-                            .addComponent(lblCommunity))
-                        .addGap(453, 453, 453)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(42, 42, 42)
+                        .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_create, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(valDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,28 +200,30 @@ public class PatientAppointment extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCity)
+                    .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtEncounterId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblCity))
-                    .addComponent(btn_create))
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCommunity))
+                        .addComponent(txtAbout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblCommunity))
+                    .addComponent(valDate, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCommunity1)
-                    .addComponent(txtBloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                    .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_create))
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCommunity3)
-                    .addComponent(txtPulseRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCommunity4)
-                    .addComponent(txtTemperature, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -217,62 +233,64 @@ public class PatientAppointment extends javax.swing.JPanel {
 
         // set data to textfield when raw is selected
 
-        String tblEncounterID = tblModel.getValueAt(tblDetails.getSelectedRow(),0).toString();
-        Date tblDate = (Date) tblModel.getValueAt(tblDetails.getSelectedRow(),1);
-        String tblPatient = tblModel.getValueAt(tblDetails.getSelectedRow(),3).toString();
-        VitalSigns v = (VitalSigns) tblModel.getValueAt(tblDetails.getSelectedRow(),5);
+        String tblName = tblModel.getValueAt(tblDetails.getSelectedRow(),0).toString();
+        String tblAbout = tblModel.getValueAt(tblDetails.getSelectedRow(),1).toString();
+        String tblCommunity = tblModel.getValueAt(tblDetails.getSelectedRow(),2).toString();
+        String tblHospital = tblModel.getValueAt(tblDetails.getSelectedRow(),3).toString();
+        String tblGender = tblModel.getValueAt(tblDetails.getSelectedRow(),4).toString();
 
-        LocalDate localDate = tblDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
-        txtEncounterId.setText(tblEncounterID);
-        txtPatient.setText(tblPatient);
-        datePicker.setDate(localDate);
-        txtPulseRate.setText(String.valueOf(v.getPulseRate()));
-        txtBreathing.setText(String.valueOf(v.getRespiratoryRate()));
-        txtBloodPressure.setText(v.getBloodPressure());
-        txtTemperature.setText(String.valueOf(v.getBodyTemperature()));
-
-        setValidationsNull();
+        txtDoctor.setText(tblName);
+        txtAbout.setText(tblAbout);
+        txtHospital.setText(tblHospital);
+        txtCommunity.setText(tblCommunity);
+        txtGender.setText(tblGender);
+        
+        btn_create.setVisible(true);
+        datePicker.setVisible(true);
     }//GEN-LAST:event_tblDetailsMouseClicked
-
-    private void txtTemperatureKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTemperatureKeyReleased
-        if (!this.validations.ValidateFloat(txtTemperature.getText()) ) {
-            System.out.println(txtTemperature.getText());
-            valTemperature.setText("Please enter valid value");
-        }
-        else {
-            valTemperature.setText(null);
-        }
-    }//GEN-LAST:event_txtTemperatureKeyReleased
-
-    private void txtPulseRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPulseRateKeyReleased
-        if (!this.validations.ValidateInt(txtPulseRate.getText()) ) {
-            valPulse.setText("Please enter valid value");
-        }
-        else {
-            valPulse.setText(null);
-        }
-    }//GEN-LAST:event_txtPulseRateKeyReleased
-
-    private void txtBloodPressureKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBloodPressureKeyReleased
-        if (!this.validations.ValidateBloodPressure(txtBloodPressure.getText()) ) {
-            valBloodPressure.setText("Please enter valid value");
-        }
-        else {
-            valBloodPressure.setText(null);
-        }
-    }//GEN-LAST:event_txtBloodPressureKeyReleased
 
     private void btn_createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_createActionPerformed
 
-        this.dispose();
-        CreateEncounter adminArea = new CreateEncounter();
-        adminArea.setVisible(true);
+        DefaultTableModel tblModel = (DefaultTableModel) tblDetails.getModel();
+        Doctor doctor = (Doctor) tblModel.getValueAt(tblDetails.getSelectedRow(),5);
+        
+        var valid = true;
+        
+        if (!this.validations.ValidateEmpty(datePicker.getDateStringOrEmptyString()) ) {
+            valDate.setText("Date of joining is required");
+            valid = false;
+        }
+        
+        if (valid) {
+            Date date;
+            
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-M-dd");
+            
+            try {
+                date = formatter.parse(datePicker.getDateStringOrEmptyString());
+                
+            } catch (ParseException ex) {
+                date = new Date(1970, 01, 01);
+            }
+            
+            if (!doctor.getHospital().isPatientExist(patient)) {
+               doctor.getHospital().addPatient(patient);
+            }
+            
+            MainJFrame.encounterDirectory.newEncounter(date, doctor, doctor.getHospital(), patient);
+            valDate.setText(null);
+            
+            JOptionPane.showMessageDialog(this, "Appointment Created");
+        }
+        
     }//GEN-LAST:event_btn_createActionPerformed
 
     private void txtSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyReleased
 
         setTextNull();
+        btn_create.setVisible(false);
+        datePicker.setVisible(false);
+        
         DefaultTableModel model = (DefaultTableModel)tblDetails.getModel();
 
         model.setRowCount(0);
@@ -285,13 +303,39 @@ public class PatientAppointment extends javax.swing.JPanel {
                     break;
                 }
             }
-
         }
     }//GEN-LAST:event_txtSearchKeyReleased
 
+    private void populateTable() {
+        
+        DefaultTableModel model = (DefaultTableModel) tblDetails.getModel();
+        model.setRowCount(0);
+        Patient p = (Patient) MainJFrame.loginSession.getObject();
+        
+        for (Doctor c : MainJFrame.hospitalDirectory.getDoctorsInCommunity(p.getCommunity())){
+            Object[] row = new Object[6];
+            row[0] = c.getName();
+            row[1] = c.getAbout();
+            row[2] = c.getCommunity().getName();
+            row[3] = c.getHospital().getName();
+            row[4] = c.getGender();
+            row[5] = c;
+            
+            model.addRow(row);
+        }
+    }
+    
+    private void setTextNull() {
+        txtDoctor.setText(null);
+        txtCommunity.setText(null);
+        txtHospital.setText(null);
+        txtGender.setText(null);
+        txtAbout.setText(null);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_create;
+    private com.github.lgooddatepicker.components.DatePicker datePicker;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblCommunity;
@@ -300,11 +344,12 @@ public class PatientAppointment extends javax.swing.JPanel {
     private javax.swing.JLabel lblCommunity4;
     private javax.swing.JLabel lblDoctorRecord;
     private javax.swing.JTable tblDetails;
-    private javax.swing.JTextField txtBloodPressure;
-    private javax.swing.JTextField txtEncounterId;
-    private javax.swing.JTextField txtPatient;
-    private javax.swing.JTextField txtPulseRate;
+    private javax.swing.JTextField txtAbout;
+    private javax.swing.JTextField txtCommunity;
+    private javax.swing.JTextField txtDoctor;
+    private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtHospital;
     private javax.swing.JTextField txtSearch;
-    private javax.swing.JTextField txtTemperature;
+    private javax.swing.JLabel valDate;
     // End of variables declaration//GEN-END:variables
 }

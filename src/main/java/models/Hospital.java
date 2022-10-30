@@ -123,4 +123,13 @@ public class Hospital {
         
         return null;
     }
+    
+    public boolean isPatientExist(Patient patient) {
+        for (Patient d: patientList) {
+            if (d.equals(patient)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

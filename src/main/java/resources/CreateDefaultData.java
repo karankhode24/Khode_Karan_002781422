@@ -50,6 +50,7 @@ public class CreateDefaultData {
         Hospital c = MainJFrame.hospitalDirectory.newHospital("mgm", "At indore", 452002, "637 sd", springField, gb);
         Hospital d = MainJFrame.hospitalDirectory.newHospital("gurukripa", "At high court", 452003, "637 sd", lowell, mr);
         Hospital e = MainJFrame.hospitalDirectory.newHospital("mengo", "At nowhere", 452004, "637 sd", lowell, ai);
+        Hospital f = MainJFrame.hospitalDirectory.newHospital("kgf", "At home", 452003, "ok sir", boston, jp);
         
         // create person
         Person p1 = MainJFrame.personDirectory.newPerson("karan", 24, "karan@gmail.com", "Male", "7878787878", boston, jp, "vbhv", "vbhv10");
@@ -69,6 +70,8 @@ public class CreateDefaultData {
         Doctor d3 = MainJFrame.doctorDirectory.newDoctor("clinic", c, "nalin", 26, "nalin@gmail.com", "Male", "9878787878", worcester, vn, "nalin", "vbhv10");
         Doctor d4 = MainJFrame.doctorDirectory.newDoctor("skin",d, "amit", 27, "amit@gmail.com", "Male", "2378787878", cambridge, sn, "amit", "vbhv10");
         Doctor d5 = MainJFrame.doctorDirectory.newDoctor("obs", e, "adi", 24, "adi@gmail.com", "Male", "3578787878", brockton, r, "adi", "vbhv10");
+        Doctor d6 = MainJFrame.doctorDirectory.newDoctor("bone", f, "karan", 24, "karan@gmail.com", "Male", "3578745878", boston, jp, "karan", "vbhv10");
+        
         
         // House
         House h1 = cn.addHouse("515 kalani nagar", "aerodrome road");
